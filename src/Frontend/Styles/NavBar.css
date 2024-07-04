@@ -1,0 +1,118 @@
+/* src/Styles/NavBar.css */
+
+/* Importar la fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Aplicar la fuente Roboto a todo el body */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 5px;
+}
+
+/* Cambiar el color de fondo del Navbar */
+.custom-navbar {
+  background-color: #0D3D5F; /* Color oscuro */
+  font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto al Navbar */
+}
+
+/* Contenedor de enlaces */
+.custom-navbar .navbar-nav {
+  margin-left: 5%; /* Separar los enlaces del logo */
+}
+
+/* Cambiar el color de los enlaces del Navbar */
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffff; /* Color blanco */
+  position: relative; /* Necesario para el pseudo-elemento */
+  padding-bottom: 5px; /* Añadir espacio para la línea */
+  font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto a los enlaces */
+  margin-right: 15px; /* Añadir espacio entre los enlaces */
+}
+
+/* Ajustar el último enlace para eliminar el margen derecho adicional */
+.custom-navbar .navbar-nav .nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Añadir una línea debajo del texto en estado normal */
+.custom-navbar .navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: transparent;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cambiar el color de los enlaces del Navbar al pasar el ratón */
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #70AF3A; /* Color verde */
+}
+
+/* Cambiar la línea debajo del texto al pasar el ratón */
+.custom-navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+  background: #70AF3A; /* Mismo color que el texto */
+}
+
+/* Efecto hover para el logo */
+.custom-navbar .navbar-brand img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-navbar .navbar-brand img:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiar el color del ícono del menú hamburguesa */
+.custom-navbar .navbar-toggler {
+  border-color: transparent; /* Quitar el borde del botón */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%2872,255,112,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Cambiar el color a verde */
+}
+
+/* Ajustar el margen del logo */
+.custom-navbar .navbar-brand {
+    margin-right: 50px; /* Ajustar el margen derecho del logo */
+}
+
+/* Estilos para el formulario de búsqueda */
+.search-form {
+  margin-left: auto; /* Alinear el formulario de búsqueda a la derecha */
+  display: flex; /* Usar flexbox para alinear elementos dentro del formulario */
+}
+
+.search-form .form-control {
+  border-radius: 2px; /* Quitar bordes redondeados del input */
+  margin-right: 5px; /* Espaciado entre el input y el botón */
+}
+
+.search-form .btn {
+  border-radius: 0; /* Quitar bordes redondeados del botón */
+  background-color: #0D3D5F; /* Color de fondo del botón */
+  border-color: #ffffff; /* Color del borde del botón */
+}
+
+.search-form .btn:hover {
+  background-color: #5d9132; /* Color de fondo del botón al pasar el ratón */
+  border-color: #5d9132; /* Color del borde del botón al pasar el ratón */
+  color:#ffffff; /*Color de texto */
+}
+
+.search-form .form-control:focus {
+    border-color: #70AF3A; /* Cambiar el borde a verde cuando el campo está enfocado */
+    box-shadow: 0 0 0 0.2rem rgba(112, 175, 58, 0.25); /* Añadir sombra verde cuando el campo está enfocado */
+}
+
+/* Estilos responsive */
+@media (max-width: 991px) {
+  .search-form {
+    margin-top: 10px; /* Añadir margen superior para la versión móvil */
+  }
+}
