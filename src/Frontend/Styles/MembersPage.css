@@ -1,0 +1,56 @@
+.members-page-container {
+  padding: 2rem;
+  background: #ffffff; /* Fondo blanco */
+  border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin-top: 0rem; /* Separación superior */
+  transition: all 0.3s ease; /* Transición para los cambios */
+  margin-left: 10px;
+}
+
+.members-page-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra en hover */
+}
+
+.members-page-title {
+  color: #70AF3A; /* Color verde para el título */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Tamaño de letra grande */
+  border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+  padding-bottom: 0.5rem;
+}
+
+/* Ajustes para el contenedor de las tarjetas */
+.container {
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+}
+
+.col-md-4 {
+  flex: 0 1 30%; /* Ajustar el ancho para pantallas grandes */
+  max-width: 30%;
+  margin-bottom: 2rem; /* Espacio inferior entre tarjetas */
+  padding: 0 15px; /* Espacio entre tarjetas */
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .col-md-4 {
+    flex: 0 1 45%; /* Ajustar el ancho para pantallas medianas */
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 1 100%; /* Ajustar el ancho para pantallas pequeñas */
+    max-width: 100%;
+  }
+}

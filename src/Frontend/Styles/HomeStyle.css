@@ -1,0 +1,258 @@
+/* Estilos para las tarjetas */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Puedes ajustar la fuente según tu preferencia */
+    background: linear-gradient(to left, #a2c2e6, #f0f5f9); /* Degradado azul suave */
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -50px; /* Ajusta esto según el diseño deseado para sobreponer las tarjetas al slider */
+    padding: 0 10px;
+    z-index: 3; /* Asegura que las tarjetas estén sobre el slider */
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-title {
+    color: #70AF3A; /* Título en verde */
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: black;
+}
+
+.card:hover {
+    background-color: #70AF3A; /* Fondo verde en hover */
+    transform: translateY(-10px);
+}
+
+.card:hover .card-title,
+.card:hover .card-description {
+    color: white; /* Texto blanco en hover */
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-top: 1rem;
+    background: #f9f9f9; /* Fondo ligero */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: all 0.3s ease; /* Transición para los cambios */
+}
+
+.about-section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra en hover */
+}
+
+.about-text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.about-text h2 {
+    color: #70AF3A; /* Título en verde */
+    font-size: 2rem; /* Tamaño de letra medio */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+    display: inline-block;
+}
+
+.about-text h1 {
+    font-size: 3rem; /* Tamaño de letra grande */
+    margin-bottom: 1rem;
+    color: #333; /* Color de texto más oscuro */
+}
+
+.about-text p {
+    font-size: 1rem; /* Tamaño de letra normal */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    color: #666; /* Color de texto gris */
+}
+
+.indicators {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-top: 1.5rem !important;
+}
+
+.indicator {
+    flex: 1!important;
+    text-align: center!important;
+    position: relative; /* Necesario para el efecto de pulso */
+}
+
+.indicator-number {
+    font-size: 2.5rem !important; /* Tamaño de letra grande para el número */
+    color: #70AF3A !important; /* Color verde para el número */
+    margin: 0 !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para el efecto de pulso */
+}
+
+.indicator-description {
+    font-size: 0.875rem !important; /* Tamaño de letra más pequeño para la descripción */
+    color: #666 !important; /* Color de texto gris */
+    margin-top: 0.5rem !important;
+}
+
+.indicator:hover .indicator-number {
+    animation: pulse 1s infinite; /* Aplicar la animación en hover */
+    color: #f9f9f9 !important;
+    
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+        background-color: #70AF3A;
+        color: white; /* Color blanco en el estado inicial */
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #70AF3A;
+        color: white; /* Color blanco durante el pulso */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+        background-color: #70AF3A;
+        color: white; /* Color blanco al final del pulso */
+    }
+}
+
+.about-image {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transición para el zoom */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Zoom en hover */
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        flex: 1 1 100%;
+    }
+
+    .about-image img {
+        margin: 1rem 0;
+    }
+
+    .indicators {
+        flex-direction: column;
+    }
+
+    .indicator {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para el Plan de Acción */
+.action-plan-section {
+    padding: 2rem;
+    background: #e9f5e9; /* Fondo claro */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 1rem; /* Espacio encima de la sección */
+    text-align: center;
+  }
+  
+  .action-plan-section h2 {
+    font-size: 2rem;
+    color: #70AF3A; /* Título en verde */
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+    display: inline-block;
+  }
+  
+  .action-plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre los pasos */
+  }
+  
+  .action-plan-step {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    flex: 1 1 calc(25% - 2rem); /* 4 columnas, con espacio entre */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .action-plan-step:hover {
+    background-color: #70AF3A; /* Fondo verde en hover */
+    color: white;
+    transform: translateY(-10px);
+  }
+  
+  .step-number {
+    background-color: #70AF3A; /* Fondo verde para el número */
+    color: white;
+    font-size: 1.5rem; /* Tamaño de número */
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto; /* Centra el número y añade margen abajo */
+  }
+  
+  .step-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .step-content p {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .action-plan-step {
+      flex: 1 1 calc(50% - 2rem); /* 2 columnas en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .action-plan-step {
+      flex: 1 1 100%; /* 1 columna en pantallas muy pequeñas */
+    }
+  }
+  

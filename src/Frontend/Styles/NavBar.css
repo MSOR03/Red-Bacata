@@ -6,13 +6,14 @@
 /* Aplicar la fuente Roboto a todo el body */
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 5px;
+  
 }
 
 /* Cambiar el color de fondo del Navbar */
 .custom-navbar {
   background-color: #0D3D5F; /* Color oscuro */
   font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto al Navbar */
+  margin-left: 10px;
 }
 
 /* Contenedor de enlaces */
