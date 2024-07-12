@@ -1,0 +1,36 @@
+.services-page {
+    padding: 2rem;
+    background: #ffffff; /* Fondo blanco */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+    transition: all 0.3s ease; /* Transición para los cambios */
+  }
+  
+  .services-page:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra en hover */
+  }
+  
+ 
+  .services-page h1{
+    color:#70AF3A;
+    border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */ 
+    text-align: center;
+  }
+  
+
+  /* src/Styles/Gallery.css */
+
+/* Modo oscuro para la página de servicios */
+body.dark-mode .services-page {
+  background: #1f1f1f; /* Fondo oscuro */
+  border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  color: #e0e0e0; /* Texto claro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+}
+
+body.dark-mode .services-page h1 {
+  color: #70AF3A; /* Título en verde */
+  border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+}

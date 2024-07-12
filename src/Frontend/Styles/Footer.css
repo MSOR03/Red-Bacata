@@ -59,7 +59,7 @@ html, body {
   
   /* Sección de redes sociales */
   .footer-social {
-    background-color: #568C40;
+    background: linear-gradient(135deg, #031020, #1d5e2c);;
   }
   
   /* Estilos del texto en la sección de redes sociales */
@@ -110,7 +110,7 @@ html, body {
   
   /* Estilos para el pie de página */
   .footer-bottom {
-    background-color: #568C40;
+    background: linear-gradient(135deg, #031020, #1d5e2c);
     padding: 10px 0;
   }
   
@@ -119,3 +119,71 @@ html, body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   }
   
+  .footer-social a {
+    margin-right: 16px;
+    display: inline-block;
+    border-radius: 50%; /* Hacer un círculo */
+    padding: 10px; /* Tamaño del círculo */
+    
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto de hover para los enlaces de redes sociales */
+.footer-social a:hover {
+    background-color: #fff; /* Fondo blanco */
+}
+
+/* Efecto de hover para los íconos */
+.footer-social a:hover i {
+    color: #70AF3A; /* Color verde del ícono */
+    transform: scale(1.2); /* Aumentar el tamaño del ícono */
+}
+
+
+body.dark-mode .footer-info {
+  background-image: none; /* Quitar la imagen de fondo */
+  background: linear-gradient(145deg, #000000, #162b2b);
+}
+
+body.dark-mode .footer-info::before {
+  background: rgba(0, 0, 0, 0.5); /* Filtro oscuro más leve con 50% de opacidad */
+}
+
+body.dark-mode .footer-bottom {
+  background-color: #1f1f1f; /* Fondo oscuro para el pie de página */
+}
+
+body.dark-mode .footer-social {
+  background-color: #121212; /* Fondo oscuro para la sección de redes sociales */
+}
+
+body.dark-mode .footer-info-content p, 
+body.dark-mode .footer-info-content h6 {
+  color: #ffffff; /* Texto blanco */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+body.dark-mode .footer-social a {
+  border: 2px solid #333333; /* Borde oscuro */
+}
+
+body.dark-mode .footer-social a:hover {
+  background-color: #333333; /* Fondo oscuro en hover */
+}
+
+body.dark-mode .footer-social a:hover i {
+  color: #70AF3A; /* Color verde del ícono en hover */
+}
+
+body.dark-mode .text-white {
+  color: #ffffff !important; /* Texto blanco */
+}
+
+body.dark-mode a.text-white:hover {
+  color: #ccc !important; /* Color de enlace en hover */
+}
+
+/* Estilos adicionales para el placeholder en modo oscuro */
+body.dark-mode .search-form .form-control::placeholder {
+  color: #b0b0b0; /* Color de texto del placeholder */
+}

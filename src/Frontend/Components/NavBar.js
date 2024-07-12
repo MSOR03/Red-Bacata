@@ -1,8 +1,12 @@
+// src/Components/NavBar.js
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, Form, FormControl, Button, Alert } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from '../Images/Logo.png'; // Asegúrate de tener un logo en el directorio src
-import '../Styles/NavBar.css'; // Importar el archivo CSS
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faInfoCircle, faBook, faProjectDiagram, faConciergeBell, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import logo from '../Images/Logo.png';
+import '../Styles/NavBar.css';
+import ThemeToggle from '../Components/ThemeToggle';
 
 function NavBar() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,7 +18,6 @@ function NavBar() {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica de redirección a la sección correspondiente
     const sectionId = searchTerm.toLowerCase().replace(/\s+/g, '-');
     const section = document.getElementById(sectionId);
     if (section) {
@@ -27,13 +30,13 @@ function NavBar() {
 
   return (
     <>
-      <Navbar className="custom-navbar" expand="lg">
+      <Navbar className="custom-navbar fixed-top" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href='/'>
             <img
               src={logo}
-              width="80"
-              height="80"
+              width="70"
+              height="70"
               className="d-inline-block align-top"
               alt="Logo del grupo de investigación"
             />
@@ -42,22 +45,34 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <LinkContainer to="/">
-                <Nav.Link>¿QUIENES SOMOS?</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faInfoCircle} /> ¿QUIENES SOMOS?
+                </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/MembersPage">
-                <Nav.Link>MIEMBROS</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faUsers} /> MIEMBROS
+                </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/GuidesPage">
-                <Nav.Link>GUIAS</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faBook} /> GUIAS
+                </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/ProjectsPage">
-                <Nav.Link>PROYECTOS</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faProjectDiagram} /> PROYECTOS
+                </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/ServicesPage">
-                <Nav.Link>SERVICIOS</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faConciergeBell} /> SERVICIOS
+                </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/ContactPage">
-                <Nav.Link>CONTACTANOS</Nav.Link>
+                <Nav.Link>
+                  <FontAwesomeIcon icon={faEnvelope} /> CONTACTANOS
+                </Nav.Link>
               </LinkContainer>
             </Nav>
             <Form className="d-flex search-form" onSubmit={handleSearchSubmit}>
@@ -71,12 +86,13 @@ function NavBar() {
               />
               <Button type="submit" variant="outline-light">Buscar</Button>
             </Form>
+            <ThemeToggle/>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
       {showAlert && (
-        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible>
+        <Alert variant="success" onClose={() => setShowAlert(false)} dismissible className="alert-overlay">
           Sección no encontrada: {searchTerm}
         </Alert>
       )}

@@ -11,6 +11,21 @@
     width: 100%;
     max-width: 600px; /* Ancho máximo de la tarjeta */
   }
+
+  .card:hover {
+    background: linear-gradient(135deg, #031020, #1d5e2c);
+    color: white;
+    box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3); /* Efecto de alumbre */
+    transform: translateY(-10px);
+    z-index: 2;
+    filter: brightness(1.1);
+}
+
+.card:hover .descriptionText,
+.card:hover .card-title,
+.card:hover .btn {
+    color: white;
+}
   
   .card:hover {
     box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3); /* Efecto de alumbre */
@@ -93,3 +108,101 @@
     filter: brightness(1.1);
   }
   
+/* Estilos para el modo oscuro en tarjetas con efecto metálico oscuro */
+body.dark-mode .card {
+  background: linear-gradient(145deg, #0c0c0c, #172015); /* Gradiente metálico oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 600px; /* Ancho máximo de la tarjeta */
+}
+
+/* Efecto de hover con resplandor metálico */
+body.dark-mode .card:hover {
+  box-shadow: 0 0 20px rgba(0, 150, 136, 0.7), 0 0 30px rgba(0, 150, 136, 0.4); /* Efecto de resplandor verde metálico */
+  transform: translateY(-10px);
+  z-index: 2;
+  filter: brightness(1.1); /* Agregar un ligero brillo alrededor de la tarjeta */
+}
+
+/* Estilo del contenido de la tarjeta */
+body.dark-mode .card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+/* Estilo del texto de descripción en el modo oscuro */
+body.dark-mode .descriptionText {
+  color: #e0e0e0; /* Texto claro para la descripción */
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Estilo de la imagen en la parte superior de la tarjeta */
+body.dark-mode .overflow {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+body.dark-mode .card-img-top {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .card-img-top:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo del título de la tarjeta */
+body.dark-mode .card-title {
+  color: #70AF3A; /* Verde metálico para el título */
+  margin-bottom: 10px;
+}
+
+/* Estilo del botón en el modo oscuro */
+body.dark-mode .btn {
+  background-color: #70AF3A; /* Fondo verde para el botón */
+  color: white; /* Texto blanco para el botón */
+  transition: all 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+body.dark-mode .btn:hover {
+  background-color: #5b8c2a; /* Un tono más oscuro de verde para el hover del botón */
+  color: white;
+}
+
+/* Estilo del texto de la tarjeta en el modo oscuro */
+body.dark-mode .card-text {
+  color: #b0b0b0; /* Texto gris claro */
+}
+
+/* Estilo del botón primario en el modo oscuro */
+body.dark-mode .btn-primary {
+  background-color: #70AF3A; /* Fondo verde para el botón primario */
+  border-color: #70AF3A; /* Borde verde */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #5f8c2a; /* Verde oscuro en hover */
+  border-color: #5f8c2a; /* Borde verde oscuro */
+}
+
+/* Estilo del botón secundario en el modo oscuro */
+body.dark-mode .btn-secondary {
+  background-color: #444; /* Fondo oscuro para botones secundarios */
+  color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #555; /* Fondo más oscuro en hover */
+}

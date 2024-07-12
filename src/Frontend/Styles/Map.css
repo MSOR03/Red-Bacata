@@ -1,0 +1,116 @@
+.map-container {
+    position: relative;
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    background: #f9f9f9; /* Fondo claro para contrastar con el mapa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    z-index: 500;
+    
+  }
+  
+  .map-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(112, 175, 58, 0.8); /* Fondo verde semitransparente */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 600; /* Asegura que el título esté sobre el mapa */
+  }
+  
+  .leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+    z-index: 500;
+  }
+  
+  .leaflet-control-zoom {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    z-index: 500;
+  }
+  
+  /* Opcional: Personaliza los botones de zoom */
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out {
+    background: #70AF3A !important; /* Color de fondo del botón */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  
+  .leaflet-control-zoom-in:hover,
+  .leaflet-control-zoom-out:hover {
+    background: #5a8a2f !important; /* Color de fondo en hover */
+  }
+  
+
+  @media (max-width: 768px) {
+    .leaflet-popup-content {
+      font-size: 0.9rem;
+    }
+    
+    .leaflet-popup-content img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+/* Modo oscuro para el contenedor del mapa */
+body.dark-mode .map-container {
+  background: #1a1a1a; /* Fondo oscuro metálico */
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.6); /* Sombra verde metálica */
+}
+
+/* Título del mapa en modo oscuro */
+body.dark-mode .map-title {
+  background: rgba(112, 175, 58, 0.9); /* Fondo verde más oscuro y menos transparente */
+  color: #fff; /* Texto blanco */
+  font-size: 18px; /* Aumento del tamaño de fuente */
+  padding: 10px 15px; /* Aumento del padding */
+  border-radius: 8px; /* Bordes más redondeados */
+}
+
+/* Estilos de la hoja de estilo del mapa */
+body.dark-mode .leaflet-container {
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Sombra verde metálica */
+}
+
+/* Estilos de los botones de zoom en modo oscuro */
+body.dark-mode .leaflet-control-zoom-in,
+body.dark-mode .leaflet-control-zoom-out {
+  background: #70AF3A !important; /* Color de fondo verde metálico */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+body.dark-mode .leaflet-control-zoom-in:hover,
+body.dark-mode .leaflet-control-zoom-out:hover {
+  background: #5a8a2f !important; /* Verde metálico oscuro en hover */
+}
+
+/* Estilos del ícono de ubicación */
+body.dark-mode .location-icon .fa-map-marker-alt {
+  color: #70AF3A; /* Color verde metálico */
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+/* Estilo del pulso en el ícono de ubicación */
+body.dark-mode .location-icon .pulse {
+  background: rgba(112, 175, 58, 0.6); /* Color verde metálico semitransparente */
+  box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.2); /* Borde verde metálico */
+}
+
+/* Estilos para el contenido del popup en pantallas pequeñas */
+@media (max-width: 768px) {
+  body.dark-mode .leaflet-popup-content {
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+  }
+
+  body.dark-mode .leaflet-popup-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}

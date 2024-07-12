@@ -1,0 +1,75 @@
+/* src/Styles/WhatsAppButton.css */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra básica */
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    animation: pulse 1.5s infinite; /* Añadido para la animación de pulso */
+  }
+  
+  /* Efecto de palpitar con luz alrededor */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 0, 0.6); /* Efecto de luz verde */
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    }
+  }
+  
+  /* Efecto de luz con un radio de resplandor */
+  .whatsapp-button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0, 255, 0, 0.3); /* Fondo verde claro */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Sombra difusa verde */
+    z-index: -1; /* Asegura que la luz esté detrás del botón */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Oculta la luz inicialmente */
+  }
+  
+  /* Mostrar la luz al hacer hover */
+  .whatsapp-button:hover::before {
+    opacity: 1; /* Muestra el resplandor verde en hover */
+  }
+  
+  /* Cambio de color y zoom al pasar el mouse */
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Color más oscuro en hover */
+    transform: scale(1.2); /* Aumentar el tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 255, 0, 0.7); /* Mayor sombra y luz verde en hover */
+  }
+  
+  /* Efecto al hacer clic */
+  .whatsapp-button:active {
+    transform: scale(0.9); /* Efecto al hacer clic */
+  }
+  
+  /* Eliminar el contorno del enfoque */
+  .whatsapp-button:focus {
+    outline: none;
+  }
+  

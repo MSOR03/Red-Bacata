@@ -1,10 +1,6 @@
 /* Estilos para las tarjetas */
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif; /* Puedes ajustar la fuente según tu preferencia */
-    background: linear-gradient(to left, #a2c2e6, #f0f5f9); /* Degradado azul suave */
-}
+
+
 
 .cards-container {
     display: flex;
@@ -46,7 +42,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
     background: #f9f9f9; /* Fondo ligero */
     border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
     border-radius: 8px; /* Bordes redondeados */
@@ -110,28 +106,28 @@ body, html {
 
 .indicator:hover .indicator-number {
     animation: pulse 1s infinite; /* Aplicar la animación en hover */
-    color: #f9f9f9 !important;
+    color: #10b133 !important;
     
 }
 
-@keyframes pulse {
+@keyframes pulse  {
     0% {
         transform: scale(1);
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-        background-color: #70AF3A;
-        color: white; /* Color blanco en el estado inicial */
+        background-color: #70AF3A !important;
+        color: white !important; /* Color blanco en el estado inicial */
     }
     50% {
         transform: scale(1.1);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: #70AF3A;
-        color: white; /* Color blanco durante el pulso */
+        background-color: #70AF3A !important;
+        color: white !important; /* Color blanco durante el pulso */
     }
     100% {
         transform: scale(1);
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-        background-color: #70AF3A;
-        color: white; /* Color blanco al final del pulso */
+        background-color: #70AF3A !important;
+        color: white !important; /* Color blanco al final del pulso */
     }
 }
 
@@ -186,7 +182,7 @@ body, html {
     border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin-top: 1rem; /* Espacio encima de la sección */
+    margin-top: 0rem; /* Espacio encima de la sección */
     text-align: center;
   }
   
@@ -215,10 +211,16 @@ body, html {
   }
   
   .action-plan-step:hover {
-    background-color: #70AF3A; /* Fondo verde en hover */
-    color: white;
-    transform: translateY(-10px);
+    background: linear-gradient(135deg, #031020, #1d5e2c);
+  
   }
+  
+  .action-plan-step:hover h2 ,
+  .action-plan-step:hover p ,
+  .action-plan-step:hover h3 {
+    color: white;
+  }
+
   
   .step-number {
     background-color: #70AF3A; /* Fondo verde para el número */
@@ -243,6 +245,10 @@ body, html {
     font-size: 0.875rem;
     color: #666;
   }
+
+  .step-content p:hover{
+    color: white;
+  }
   
   @media (max-width: 768px) {
     .action-plan-step {
@@ -254,5 +260,124 @@ body, html {
     .action-plan-step {
       flex: 1 1 100%; /* 1 columna en pantallas muy pequeñas */
     }
+  }
+  
+
+  /* Modo oscuro para la página de inicio */
+body.dark-mode {
+    background: linear-gradient(to left, #1a1a1a, #2d2d2d); /* Degradado oscuro */
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  /* Estilos para las tarjetas */
+  body.dark-mode .card {
+    background-color: #333; /* Fondo oscuro para las tarjetas */
+    color: #e0e0e0; /* Texto claro */
+    border: 1px solid #444; /* Borde oscuro */
+  }
+  
+  body.dark-mode .card-title {
+    color: #70AF3A; /* Título en verde */
+  }
+  
+  body.dark-mode .card-description {
+    color: #bbb; /* Texto más claro para descripción */
+  }
+  
+  body.dark-mode .card:hover {
+    background-color: #444; /* Fondo más oscuro en hover */
+  }
+  
+  body.dark-mode .card:hover .card-title,
+  body.dark-mode .card:hover .card-description {
+    color: #ffffff; /* Texto blanco en hover */
+  }
+  
+  /* Estilos para la sección "Sobre Nosotros" */
+  body.dark-mode .about-section {
+    background: #1f1f1f; /* Fondo oscuro */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  }
+  
+  body.dark-mode .about-text h2 {
+    color: #70AF3A; /* Título en verde */
+  }
+  
+  body.dark-mode .about-text h1 {
+    color: #e0e0e0; /* Título más claro */
+  }
+  
+  body.dark-mode .about-text p {
+    color: #aaa; /* Texto gris claro */
+  }
+  
+  body.dark-mode .about-image img {
+    border: 1px solid #444; /* Borde oscuro para la imagen */
+  }
+  
+  /* Estilos para los indicadores */
+  body.dark-mode .indicators {
+    color: #70AF3A; /* Color verde para los números */
+  }
+  
+  body.dark-mode .indicator-description {
+    color: #bbb; /* Texto gris claro */
+  }
+  
+  body.dark-mode .indicator:hover .indicator-number {
+    color: #10b133; /* Verde brillante en el pulso */
+  }
+  
+  /* Estilos para el Plan de Acción */
+  body.dark-mode .action-plan-section {
+    background: #2a2a2a; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  }
+  
+  body.dark-mode .action-plan-step {
+    background: #333; /* Fondo oscuro para los pasos */
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  body.dark-mode .action-plan-step:hover {
+    background-color: #444; /* Fondo más oscuro en hover */
+  }
+  
+  body.dark-mode .step-number {
+    background-color: #70AF3A; /* Fondo verde para el número */
+  }
+  
+  body.dark-mode .step-content h3 {
+    color: #e0e0e0; /* Título en texto claro */
+  }
+  
+  body.dark-mode .step-content p {
+    color: #bbb; /* Texto gris claro */
+  }
+  
+  /* Estilos adicionales para los botones */
+  body.dark-mode .btn-primary {
+    background-color: #70AF3A; /* Botón verde */
+    border-color: #70AF3A; /* Borde verde */
+  }
+  
+  body.dark-mode .btn-primary:hover {
+    background-color: #5f8c2a; /* Verde oscuro en hover */
+    border-color: #5f8c2a; /* Borde verde oscuro */
+  }
+  
+  body.dark-mode .btn-secondary {
+    background-color: #444; /* Fondo oscuro para botones secundarios */
+    color: #e0e0e0; /* Texto claro */
+  }
+  
+  body.dark-mode .btn-secondary:hover {
+    background-color: #555; /* Fondo más oscuro en hover */
+  }
+  
+  /* Placeholder en campos de búsqueda */
+  body.dark-mode .search-form .form-control::placeholder {
+    color: #888; /* Placeholder gris claro */
   }
   

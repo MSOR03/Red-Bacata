@@ -1,0 +1,84 @@
+/* src/Components/ThemeToggle.css */
+
+.theme-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 10px; /* Espacio desde el formulario de búsqueda */
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px; /* Ancho del switch ajustado */
+  height: 30px; /* Altura del switch ajustada */
+  border-radius: 15px; /* Bordes redondeados */
+  background-color: #ccc; /* Color de fondo del switch en modo claro */
+  padding: 0 5px; /* Espacio interno ajustado */
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.switch.dark {
+  background-color: #333; /* Fondo del switch en modo oscuro */
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  font-size: 16px; /* Tamaño del ícono ajustado */
+  background-color: #fff; /* Fondo blanco para los íconos */
+  border-radius: 50%;
+  padding: 4px; /* Espacio alrededor del ícono ajustado */
+  transition: background-color 0.3s;
+}
+
+.sun-icon {
+  color: #ffcc00; /* Color del ícono de sol */
+}
+
+.moon-icon {
+  color: #cccccc; /* Color del ícono de luna */
+}
+
+.switch.dark .moon-icon {
+  background-color: #444; /* Fondo oscuro para el ícono de luna en modo oscuro */
+}
+
+.switch.light .sun-icon {
+  background-color: #fff; /* Fondo blanco para el ícono de sol en modo claro */
+}
+
+.text {
+  font-size: 12px; /* Tamaño del texto ajustado */
+  color: #000; /* Color del texto en modo claro */
+}
+
+.dark-mode .text {
+  color: #fff; /* Color del texto en modo oscuro */
+}
+
+/* Texto debajo del switch */
+.theme-toggle .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px; /* Espacio entre el switch y el texto */
+}
+
+.theme-toggle .text-container .text {
+  font-size: 12px; /* Tamaño del texto */
+  color: #000; /* Color del texto en modo claro */
+}
+
+.dark-mode .theme-toggle .text-container .text {
+  color: #fff; /* Color del texto en modo oscuro */
+}

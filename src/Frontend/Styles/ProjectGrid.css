@@ -1,0 +1,286 @@
+.project-grid-container {
+    padding: 2rem;
+    background: #ffffff; /* Fondo blanco */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  
+    transition: all 0.3s ease; /* Transición para los cambios */
+  }
+  
+  .project-grid-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra en hover */
+  }
+  
+  .project-grid-title {
+    color: #70AF3A; /* Color verde para el título */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem; /* Tamaño de letra grande */
+    border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+    padding-bottom: 0.5rem;
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem; /* Espacio entre los elementos */
+  }
+  
+  .project-item {
+    position: relative;
+    width: 300px; /* Ancho fijo para los elementos */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background: #fff;
+  }
+  
+  .project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .project-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #70AF3A;
+    color: #70AF3A;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background: #70AF3A;
+    color: #fff;
+  }
+
+  /* src/Styles/ProjectGrid.css */
+
+/* Submenú de tipo de proyecto */
+.project-submenu {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas más pequeñas */
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  /* Estilos de los elementos del submenú */
+  .submenu-item {
+    background-color: #f0f0f0; /* Fondo claro por defecto */
+    color: #333; /* Color del texto */
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 10px 20px;
+    margin: 0; /* Elimina el margen */
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px; /* Tamaño de fuente */
+  }
+  
+  /* Estilo de los botones de filtro en pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .submenu-item {
+      flex: 1 1 45%; /* Dos botones por fila */
+      font-size: 14px; /* Tamaño de fuente más pequeño */
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Estilo de los botones de filtro en pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .submenu-item {
+      flex: 1 1 100%; /* Un botón por fila */
+      font-size: 14px; /* Tamaño de fuente */
+      padding: 10px;
+    }
+  }
+  
+  .submenu-item:hover {
+    background-color: #ddd; /* Fondo en hover */
+  }
+  
+  /* Elemento activo */
+  .submenu-item.active {
+    background-color: #70AF3A; /* Fondo verde cuando está activo */
+    color: #fff; /* Color del texto activo */
+    border: 1px solid #70AF3A; /* Borde verde cuando está activo */
+  }
+  
+
+  /* src/Styles/ProjectGrid.css */
+
+/* Estilos generales para el contenedor de la cuadrícula de proyectos en modo oscuro */
+body.dark-mode .project-grid-container {
+  padding: 2rem;
+  background: #1e1e1e; /* Fondo oscuro */
+  border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transition: all 0.3s ease; /* Transición para los cambios */
+}
+
+/* Efecto hover en el contenedor de la cuadrícula de proyectos */
+body.dark-mode .project-grid-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Mayor sombra en hover */
+}
+
+/* Título de la cuadrícula de proyectos en modo oscuro */
+body.dark-mode .project-grid-title {
+  color: #70AF3A; /* Color verde para el título */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Tamaño de letra grande */
+  border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+  padding-bottom: 0.5rem;
+}
+
+/* Estilos para la cuadrícula de proyectos en modo oscuro */
+body.dark-mode .project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem; /* Espacio entre los elementos */
+}
+
+/* Estilos para los ítems de la cuadrícula de proyectos en modo oscuro */
+body.dark-mode .project-item {
+  position: relative;
+  width: 300px; /* Ancho fijo para los elementos */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background: #2c2c2c; /* Fondo oscuro */
+}
+
+/* Efecto hover en los ítems de la cuadrícula de proyectos en modo oscuro */
+body.dark-mode .project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Mayor sombra en hover */
+}
+
+/* Estilos para la imagen de los proyectos en modo oscuro */
+body.dark-mode .project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos para la información de los proyectos en modo oscuro */
+body.dark-mode .project-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Título de los proyectos en modo oscuro */
+body.dark-mode .project-info h3 {
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Texto claro */
+}
+
+/* Descripción de los proyectos en modo oscuro */
+body.dark-mode .project-info p {
+  font-size: 1rem;
+  color: #b0b0b0; /* Texto gris claro */
+  margin-bottom: 1rem;
+}
+
+/* Enlace de los proyectos en modo oscuro */
+body.dark-mode .project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #70AF3A;
+  color: #70AF3A;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover en el enlace de los proyectos en modo oscuro */
+body.dark-mode .project-link:hover {
+  background: #70AF3A;
+  color: #fff;
+}
+
+/* Submenú de tipo de proyecto en modo oscuro */
+body.dark-mode .project-submenu {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas más pequeñas */
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+/* Estilos de los elementos del submenú en modo oscuro */
+body.dark-mode .submenu-item {
+  background-color: #333333; /* Fondo oscuro por defecto */
+  color: #e0e0e0; /* Color del texto claro */
+  border: 1px solid #555; /* Borde gris oscuro */
+  padding: 10px 20px;
+  margin: 0; /* Elimina el margen */
+  cursor: pointer;
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo de los botones de filtro en pantallas más pequeñas en modo oscuro */
+@media (max-width: 768px) {
+  body.dark-mode .submenu-item {
+      flex: 1 1 45%; /* Dos botones por fila */
+      font-size: 14px; /* Tamaño de fuente más pequeño */
+      padding: 8px 16px;
+  }
+}
+
+/* Estilo de los botones de filtro en pantallas muy pequeñas en modo oscuro */
+@media (max-width: 480px) {
+  body.dark-mode .submenu-item {
+      flex: 1 1 100%; /* Un botón por fila */
+      font-size: 14px; /* Tamaño de fuente */
+      padding: 10px;
+  }
+}
+
+/* Efecto hover en los elementos del submenú en modo oscuro */
+body.dark-mode .submenu-item:hover {
+  background-color: #444; /* Fondo en hover */
+}
+
+/* Estilo activo del submenú en modo oscuro */
+body.dark-mode .submenu-item.active {
+  background-color: #70AF3A; /* Fondo verde cuando está activo */
+  color: #fff; /* Color del texto activo */
+  border: 1px solid #70AF3A; /* Borde verde cuando está activo */
+}

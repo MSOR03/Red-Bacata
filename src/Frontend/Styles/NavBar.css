@@ -1,24 +1,75 @@
 /* src/Styles/NavBar.css */
-
-/* Importar la fuente Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Aplicar la fuente Roboto a todo el body */
 body {
   font-family: 'Roboto', sans-serif;
+  padding-top: 92px; /* Ajusta el padding superior para evitar que el contenido quede oculto detrás del navbar fijo */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background: linear-gradient(145deg, #000000, #162b2b); /* Degradado metálico oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-mode .custom-navbar {
+  background: linear-gradient(145deg, #000000, #162b2b);
+}
+
+body.dark-mode .custom-navbar .navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+body.dark-mode .custom-navbar .navbar-nav .nav-link:hover {
+  color: #70AF3A;
+}
+
+body.dark-mode .custom-navbar .navbar-brand img {
+  filter: brightness(0.8);
+}
+
+body.dark-mode .search-form .btn {
+  background-color: #333333;
+  border-color: #ffffff;
   
 }
 
-/* Cambiar el color de fondo del Navbar */
+body.dark-mode .search-form .btn:hover {
+  background-color: #5d9132;
+  border-color: #5d9132;
+}
+
+body.dark-mode .search-form .form-control {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .search-form .form-control:focus {
+  border-color: #70AF3A;
+  box-shadow: 0;
+  box-shadow: 0 0 0 0.2rem rgba(112, 175, 58, 0.25);
+}
+
+body.dark-mode .search-form .form-control::placeholder {
+  color: #ffffff !important; /* Color del texto del placeholder en modo oscuro */
+}
 .custom-navbar {
-  background-color: #0D3D5F; /* Color oscuro */
+  background: linear-gradient(135deg, #031020, #1d5e2c);
   font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto al Navbar */
-  margin-left: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s ease-in-out;
+  font-size: 12px !important; 
+  border-radius: 5px;
+  z-index: 1000; /* Asegúrate de que el navbar esté por encima de otros elementos */
+  position: fixed; /* Fijar el navbar en la parte superior */
+  top: 0; /* Asegúrate de que esté en la parte superior de la página */
+  left: 0; /* Asegúrate de que esté alineado a la izquierda */
+  width: 100%; /* Asegúrate de que el navbar ocupe todo el ancho de la página */
 }
 
 /* Contenedor de enlaces */
 .custom-navbar .navbar-nav {
-  margin-left: 5%; /* Separar los enlaces del logo */
+  margin-left: 0; /* Separar los enlaces del logo */
 }
 
 /* Cambiar el color de los enlaces del Navbar */
@@ -28,6 +79,7 @@ body {
   padding-bottom: 5px; /* Añadir espacio para la línea */
   font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto a los enlaces */
   margin-right: 15px; /* Añadir espacio entre los enlaces */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
 
 /* Ajustar el último enlace para eliminar el margen derecho adicional */
@@ -51,6 +103,7 @@ body {
 /* Cambiar el color de los enlaces del Navbar al pasar el ratón */
 .custom-navbar .navbar-nav .nav-link:hover {
   color: #70AF3A; /* Color verde */
+  transform: translateY(-2px); /* Efecto de desplazamiento */
 }
 
 /* Cambiar la línea debajo del texto al pasar el ratón */
@@ -69,6 +122,16 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Efecto de parpadeo en el logo */
+.custom-navbar .navbar-brand img:hover {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
 /* Cambiar el color del ícono del menú hamburguesa */
 .custom-navbar .navbar-toggler {
   border-color: transparent; /* Quitar el borde del botón */
@@ -80,35 +143,38 @@ body {
 
 /* Ajustar el margen del logo */
 .custom-navbar .navbar-brand {
-    margin-right: 50px; /* Ajustar el margen derecho del logo */
+  margin-right: 2%; /* Ajustar el margen derecho del logo */
+  margin-left: 2%
 }
 
 /* Estilos para el formulario de búsqueda */
 .search-form {
-  margin-left: auto; /* Alinear el formulario de búsqueda a la derecha */
+  margin-left: 2%; /* Alinear el formulario de búsqueda a la derecha */
   display: flex; /* Usar flexbox para alinear elementos dentro del formulario */
+  margin-right: 1%;
 }
 
 .search-form .form-control {
   border-radius: 2px; /* Quitar bordes redondeados del input */
   margin-right: 5px; /* Espaciado entre el input y el botón */
+  width: 180px; /* Ajustar el ancho del campo de texto */
 }
 
 .search-form .btn {
-  border-radius: 0; /* Quitar bordes redondeados del botón */
-  background-color: #0D3D5F; /* Color de fondo del botón */
+  border-radius: 50px; /* Botón redondeado */
+  background: #00A859; /* Color de fondo del botón */
   border-color: #ffffff; /* Color del borde del botón */
 }
 
 .search-form .btn:hover {
   background-color: #5d9132; /* Color de fondo del botón al pasar el ratón */
   border-color: #5d9132; /* Color del borde del botón al pasar el ratón */
-  color:#ffffff; /*Color de texto */
+  color: #ffffff; /* Color de texto */
 }
 
 .search-form .form-control:focus {
-    border-color: #70AF3A; /* Cambiar el borde a verde cuando el campo está enfocado */
-    box-shadow: 0 0 0 0.2rem rgba(112, 175, 58, 0.25); /* Añadir sombra verde cuando el campo está enfocado */
+  border-color: #70AF3A; /* Cambiar el borde a verde cuando el campo está enfocado */
+  box-shadow: 0 0 0 0.2rem rgba(112, 175, 58, 0.25); /* Añadir sombra verde cuando el campo está enfocado */
 }
 
 /* Estilos responsive */
@@ -116,4 +182,37 @@ body {
   .search-form {
     margin-top: 10px; /* Añadir margen superior para la versión móvil */
   }
+
+  .search-form .form-control {
+    width: 80%; /* Ajustar el ancho del campo de texto en dispositivos móviles */
+    margin-right: 3%; /* Espaciado entre el input y el botón */
+  }
 }
+
+/* Animación para los dropdowns */
+.dropdown-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Estilo de la alerta para que aparezca sobre el contenido */
+.alert-overlay {
+  position: fixed;
+  top: 85px; /* Asegúrate de que esté justo debajo del navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050; /* Asegúrate de que esté sobre el contenido */
+  width: 90%;
+  margin: 0;
+}
+
+

@@ -1,0 +1,260 @@
+/* src/Styles/CustomAccordion.css */
+.custom-accordion-item {
+  border: none; /* Elimina el borde por defecto */
+  margin-bottom: 10px; /* Espacio entre los ítems del acordeón */
+}
+
+.custom-accordion-item .accordion-button {
+  background-color: transparent; /* Hace que el botón sea transparente */
+  border: none; /* Elimina el borde */
+  padding: 0; /* Elimina el padding */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacia el contenido y la flecha */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.custom-accordion-item .accordion-header-content {
+  background-size: cover; /* Asegura que la imagen cubra el contenedor */
+  background-position: center; /* Centra la imagen */
+  color: white; /* Color del texto */
+  padding: 10px; /* Padding interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  height: 150px; /* Altura fija para la imagen */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Alineación vertical del contenido */
+  justify-content: center; /* Alineación horizontal del contenido */
+  text-align: center; /* Centra el texto */
+  position: relative; /* Para controlar la posición del contenido */
+  width: 100%; /* Asegura que ocupe todo el ancho del acordeón */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Efecto de transición */
+}
+
+.custom-accordion-item .accordion-header-content::before {
+  content: ""; /* Pseudo-elemento vacío */
+  position: absolute; /* Posición absoluta para el sombreado */
+  top: 0; /* Alineación superior */
+  left: 0; /* Alineación izquierda */
+  width: 100%; /* Ancho completo del encabezado */
+  height: 100%; /* Altura completa del encabezado */
+  background: rgba(0, 0, 0, 0.8); /* Capa oscura con transparencia */
+  z-index: 0; /* Asegura que esté detrás del contenido */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+.custom-accordion-item .accordion-header-content h2 {
+  z-index: 1; /* Asegura que el texto esté encima de la capa oscura */
+  margin: 0; /* Elimina márgenes del encabezado */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  font-size: 1.5rem; /* Tamaño del título */
+  text-align: center;
+  flex: 1; /* Asegura que el título ocupe el espacio disponible */
+}
+
+/* Efecto hover en el encabezado del acordeón */
+.custom-accordion-item:hover .accordion-header-content {
+  filter: brightness(110%); /* Imagen más brillante */
+  transform: scale(1.05); /* Escala la imagen ligeramente */
+}
+
+.custom-accordion-item:hover .accordion-header-content::before {
+  opacity: 1; /* Muestra el sombreado oscuro */
+}
+
+.custom-accordion-item:hover .accordion-header-content h2 {
+  opacity: 1; /* Muestra el título */
+  color: white;
+}
+
+/* Contenido del acordeón */
+.custom-accordion-item .accordion-body {
+  background-color: #1e1e1e; /* Color de fondo oscuro para el contenido */
+  padding: 20px; /* Padding interno */
+  border: 2px solid #70AF3A; /* Borde verde alrededor del contenido */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  margin-top: 10px; /* Espacio entre el contenido y el encabezado */
+  position: relative; /* Para controlar la posición de los elementos */
+  color: #e0e0e0; /* Color del texto */
+}
+
+/* Estilos del botón dentro del contenido del acordeón */
+.custom-accordion-item .accordion-body .download-button {
+  display: inline-block; /* Para aplicar estilos al botón */
+  background-color: #70AF3A; /* Color de fondo verde */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Padding interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-weight: bold; /* Texto en negrita */
+  margin-top: 15px; /* Espacio superior para separar del contenido */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para efectos */
+  display: flex; /* Flexbox para alinear el contenido */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border: none;
+}
+
+/* Efecto hover en el botón */
+.custom-accordion-item .accordion-body .download-button:hover {
+  background-color: #5c8c40; /* Color verde más oscuro en hover */
+  transform: scale(1.05); /* Aumenta el tamaño del botón */
+  border: none;
+}
+
+.custom-accordion-item .accordion-button:hover {
+  border: none;
+}
+
+/* Efecto de foco en el contenido del acordeón */
+.custom-accordion-item .accordion-button:focus {
+  box-shadow: none; /* Elimina el foco */
+}
+
+
+/* src/Styles/CustomAccordion.css */
+
+/* Estilos generales para .custom-accordion-item en modo oscuro */
+body.dark-mode .custom-accordion-item {
+  border: none; /* Elimina el borde por defecto */
+  margin-bottom: 10px; /* Espacio entre los ítems del acordeón */
+}
+
+body.dark-mode .custom-accordion-item .accordion-button {
+  background-color: transparent; /* Hace que el botón sea transparente */
+  border: none; /* Elimina el borde */
+  padding: 0; /* Elimina el padding */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacia el contenido y la flecha */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+body.dark-mode .custom-accordion-item .accordion-header-content {
+  background-size: cover; /* Asegura que la imagen cubra el contenedor */
+  background-position: center; /* Centra la imagen */
+  color: white; /* Color del texto */
+  padding: 10px; /* Padding interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  height: 150px; /* Altura fija para la imagen */
+  display: flex; /* Flexbox para centrar el contenido */
+  align-items: center; /* Alineación vertical del contenido */
+  justify-content: center; /* Alineación horizontal del contenido */
+  text-align: center; /* Centra el texto */
+  position: relative; /* Para controlar la posición del contenido */
+  width: 100%; /* Asegura que ocupe todo el ancho del acordeón */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Efecto de transición */
+}
+
+body.dark-mode .custom-accordion-item .accordion-header-content::before {
+  content: ""; /* Pseudo-elemento vacío */
+  position: absolute; /* Posición absoluta para el sombreado */
+  top: 0; /* Alineación superior */
+  left: 0; /* Alineación izquierda */
+  width: 100%; /* Ancho completo del encabezado */
+  height: 100%; /* Altura completa del encabezado */
+  background: rgba(0, 0, 0, 0.8); /* Capa oscura con transparencia */
+  z-index: 0; /* Asegura que esté detrás del contenido */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+}
+
+body.dark-mode .custom-accordion-item .accordion-header-content h2 {
+  z-index: 1; /* Asegura que el texto esté encima de la capa oscura */
+  margin: 0; /* Elimina márgenes del encabezado */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Efecto de transición */
+  font-size: 1.5rem; /* Tamaño del título */
+  text-align: center;
+  flex: 1; /* Asegura que el título ocupe el espacio disponible */
+}
+
+/* Efecto hover en el encabezado del acordeón */
+body.dark-mode .custom-accordion-item:hover .accordion-header-content {
+  filter: brightness(110%); /* Imagen más brillante */
+  transform: scale(1.05); /* Escala la imagen ligeramente */
+}
+
+body.dark-mode .custom-accordion-item:hover .accordion-header-content::before {
+  opacity: 1; /* Muestra el sombreado oscuro */
+}
+
+body.dark-mode .custom-accordion-item:hover .accordion-header-content h2 {
+  opacity: 1; /* Muestra el título */
+  color: white;
+}
+
+/* Contenido del acordeón */
+body.dark-mode .custom-accordion-item .accordion-body {
+  background-color: #1e1e1e; /* Color de fondo oscuro para el contenido */
+  padding: 20px; /* Padding interno */
+  border: 2px solid #70AF3A; /* Borde verde alrededor del contenido */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  margin-top: 10px; /* Espacio entre el contenido y el encabezado */
+  position: relative; /* Para controlar la posición de los elementos */
+  color: #e0e0e0; /* Color del texto */
+}
+
+/* Estilos del botón dentro del contenido del acordeón */
+body.dark-mode .custom-accordion-item .accordion-body .download-button {
+  display: inline-block; /* Para aplicar estilos al botón */
+  background-color: #70AF3A; /* Color de fondo verde */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Padding interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  font-weight: bold; /* Texto en negrita */
+  margin-top: 15px; /* Espacio superior para separar del contenido */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones para efectos */
+  display: flex; /* Flexbox para alinear el contenido */
+  align-items: center; /* Alineación vertical */
+  justify-content: center; /* Alineación horizontal */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border: none;
+}
+
+/* Efecto hover en el botón */
+body.dark-mode .custom-accordion-item .accordion-body .download-button:hover {
+  background-color: #5c8c40; /* Color verde más oscuro en hover */
+  transform: scale(1.05); /* Aumenta el tamaño del botón */
+  border: none;
+}
+
+body.dark-mode .custom-accordion-item .accordion-button:hover {
+  border: none;
+}
+
+/* Efecto de foco en el contenido del acordeón */
+body.dark-mode .custom-accordion-item .accordion-button:focus {
+  box-shadow: none; /* Elimina el foco */
+}
+
+/* Estilos responsive en modo oscuro */
+@media (max-width: 768px) {
+  body.dark-mode .custom-accordion-item .accordion-header-content {
+    height: 120px; /* Ajustar la altura para pantallas pequeñas */
+  }
+
+  body.dark-mode .custom-accordion-item .accordion-header-content h2 {
+    font-size: 1.25rem; /* Tamaño del título más pequeño para pantallas pequeñas */
+  }
+
+  body.dark-mode .custom-accordion-item .accordion-body {
+    padding: 15px; /* Ajustar padding interno para pantallas pequeñas */
+  }
+
+  body.dark-mode .custom-accordion-item .accordion-body .download-button {
+    padding: 8px 15px; /* Ajustar padding interno del botón para pantallas pequeñas */
+    font-size: 0.875rem; /* Tamaño de texto más pequeño para el botón */
+  }
+}

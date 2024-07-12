@@ -1,0 +1,189 @@
+/* src/Styles/GuidesStyle.css */
+
+/* Estilos generales para la sección de guías */
+.guides-page-container {
+    padding: 2rem;
+    background: #ffffff; /* Fondo blanco */
+    border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top:0rem; /* Separación superior */
+    margin-left: 10px;
+    transition: all 0.3s ease; /* Transición para los cambios */
+  }
+  
+  .guides-page-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Mayor sombra en hover */
+  }
+  
+  /* Título de la sección de guías */
+  .guides-page-title {
+    color: #70AF3A; /* Color verde para el título */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem; /* Tamaño de letra grande */
+    border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+    
+  }
+  
+  /* Estilos para el componente del acordeón */
+  .custom-accordion .accordion-item {
+    border: none; /* Quitar borde del acordeón */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 0.5rem; /* Espacio inferior entre los ítems del acordeón */
+  }
+  
+  .custom-accordion .accordion-header {
+    background-color: #70AF3A; /* Color verde de fondo del encabezado */
+    color: #ffffff; /* Color blanco para el texto del encabezado */
+    font-weight: bold; /* Hacer el texto más prominente */
+    padding: 1rem; /* Espacio interno del encabezado */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el encabezado */
+  }
+  
+  .custom-accordion .accordion-body {
+    background-color: #f9f9f9; /* Color de fondo gris claro para el contenido */
+    color: #333; /* Color del texto */
+    padding: 1rem; /* Espacio interno del contenido */
+    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+  }
+  
+  /* Imagen de fondo en el encabezado del acordeón */
+  .custom-accordion .accordion-header {
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  /* Imagen de fondo para cada ítem del acordeón */
+  .accordion-item {
+    position: relative;
+  }
+  
+  .accordion-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+    opacity: 0.3; /* Hacer la imagen semi-translúcida */
+    z-index: -1; /* Poner la imagen detrás del contenido */
+  }
+  
+  /* Estilos para el contenido del acordeón */
+  .accordion-body p {
+    margin: 0; /* Eliminar márgenes del párrafo */
+  }
+  
+
+  /* src/Styles/GuidesStyle.css */
+
+/* Estilos generales para la sección de guías en modo oscuro */
+body.dark-mode .guides-page-container {
+  padding: 2rem;
+  background: #1e1e1e; /* Fondo oscuro */
+  border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  margin-top: 0rem; /* Separación superior */
+  margin-left: 10px;
+  transition: all 0.3s ease; /* Transición para los cambios */
+}
+
+/* Efecto hover en la sección de guías */
+body.dark-mode .guides-page-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Mayor sombra en hover */
+}
+
+/* Título de la sección de guías en modo oscuro */
+body.dark-mode .guides-page-title {
+  color: #70AF3A; /* Color verde para el título */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem; /* Tamaño de letra grande */
+  border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+}
+
+/* Estilos para el componente del acordeón en modo oscuro */
+body.dark-mode .custom-accordion .accordion-item {
+  border: none; /* Quitar borde del acordeón */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 0.5rem; /* Espacio inferior entre los ítems del acordeón */
+}
+
+body.dark-mode .custom-accordion .accordion-header {
+  background-color: #333333; /* Fondo oscuro para el encabezado */
+  color: #ffffff; /* Color blanco para el texto del encabezado */
+  font-weight: bold; /* Hacer el texto más prominente */
+  padding: 1rem; /* Espacio interno del encabezado */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el encabezado */
+}
+
+body.dark-mode .custom-accordion .accordion-body {
+  background-color: #2c2c2c; /* Fondo oscuro para el contenido */
+  color: #e0e0e0; /* Color del texto claro */
+  padding: 1rem; /* Espacio interno del contenido */
+  border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+}
+
+/* Imagen de fondo en el encabezado del acordeón en modo oscuro */
+body.dark-mode .custom-accordion .accordion-header {
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+/* Imagen de fondo para cada ítem del acordeón en modo oscuro */
+body.dark-mode .accordion-item {
+  position: relative;
+}
+
+body.dark-mode .accordion-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantener la proporción de la imagen */
+  opacity: 0.5; /* Hacer la imagen semi-translúcida */
+  z-index: -1; /* Poner la imagen detrás del contenido */
+}
+
+/* Estilos para el contenido del acordeón en modo oscuro */
+body.dark-mode .accordion-body p {
+  margin: 0; /* Eliminar márgenes del párrafo */
+}
+
+/* Estilos para los enlaces dentro del acordeón en modo oscuro */
+body.dark-mode .accordion-body a {
+  color: #70AF3A; /* Color verde para los enlaces */
+  text-decoration: none; /* Eliminar subrayado */
+}
+
+body.dark-mode .accordion-body a:hover {
+  text-decoration: underline; /* Subrayar en hover */
+}
+
+/* Estilos responsive en modo oscuro */
+@media (max-width: 768px) {
+body.dark-mode .guides-page-container {
+  padding: 1.5rem; /* Ajustar padding interno para pantallas pequeñas */
+  margin-left: 5px; /* Ajustar margen izquierdo para pantallas pequeñas */
+}
+
+body.dark-mode .guides-page-title {
+  font-size: 1.5rem; /* Tamaño del título más pequeño para pantallas pequeñas */
+}
+
+body.dark-mode .custom-accordion .accordion-body {
+  padding: 0.75rem; /* Ajustar padding interno del contenido para pantallas pequeñas */
+}
+
+body.dark-mode .custom-accordion .accordion-body .download-button {
+  padding: 8px 15px; /* Ajustar padding interno del botón para pantallas pequeñas */
+  font-size: 0.875rem; /* Tamaño de texto más pequeño para el botón */
+}
+}

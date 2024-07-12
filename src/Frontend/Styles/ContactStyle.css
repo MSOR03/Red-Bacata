@@ -1,0 +1,394 @@
+.contact-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.map-container {
+    flex: 1;
+    height: 100%;
+}
+
+.form-container {
+    flex: 0 0 45%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    gap: 0px;
+}
+.form-group .form-label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre ícono y texto */
+  text-align: left; /* Alineación de texto a la izquierda */
+}
+
+.contact-form-card {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-card:hover {
+  background: linear-gradient(135deg, #031020, #1d5e2c);
+}
+
+.contact-form-header {
+  background: linear-gradient(135deg, #031020, #1d5e2c);;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.modal-success {
+    color: #28a745; /* Color del texto para el mensaje de éxito */
+  }
+  
+  .modal-danger {
+    color: #dc3545; /* Color del texto para el mensaje de error */
+  }
+  
+  /* Estilos adicionales para el modal */
+  .modal-content {
+    border-radius: 10px; /* Bordes redondeados del modal */
+  }
+  
+  .modal-header {
+    background: linear-gradient(135deg, #031020, #1d5e2c);; /* Fondo verde del encabezado del modal */
+    color: #fff; /* Color del texto del encabezado */
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #dee2e6; /* Borde superior del pie de página del modal */
+  }
+  
+  .modal-footer .btn-secondary {
+    background: #6c757d; /* Color del botón de cerrar */
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background: #5a636f; /* Color del botón de cerrar en hover */
+  }
+  
+  .modal-body.success {
+    color: #28a745; /* Color del texto de éxito */
+  }
+  
+  .modal-body.danger {
+    color: #dc3545; /* Color del texto de error */
+  }
+
+@media (max-width: 768px) {
+    .contact-page {
+      flex-direction: column;
+      height: 100vh;
+    }
+  
+    .map-container {
+      width: 100%;
+      height: 55vh; /* Ajustar la altura del mapa */
+    }
+  
+    .form-container {
+      width: 100%;
+      height: 70vh; /* Ajustar la altura del formulario */
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: none;
+      overflow-y: auto;
+    }
+  
+    .contact-form-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    .contact-form-card .card-body {
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+  
+  @media (max-height: 500px) {
+    .map-container {
+      height: 40vh; /* Ajustar la altura del mapa para pantallas bajas */
+    }
+  
+    .form-container {
+      height: 70vh; /* Ajustar la altura del formulario para pantallas bajas */
+    }
+  }
+  
+  
+  /* Modo oscuro para la página de contacto */
+body.dark-mode .contact-page {
+  background-color: #121212; /* Fondo oscuro para la página */
+  color: #ffffff; /* Texto blanco para contraste */
+}
+
+/* Modo oscuro para el contenedor del mapa */
+body.dark-mode .map-container {
+  background: #1a1a1a; /* Fondo oscuro metálico */
+}
+
+/* Modo oscuro para el contenedor del formulario */
+body.dark-mode .form-container {
+  background: rgba(28, 28, 28, 0.9); /* Fondo oscuro y semitransparente */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); /* Sombra verde metálica */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Modo oscuro para el encabezado del formulario */
+body.dark-mode .contact-form-header {
+  background-color: #1b1b1b; /* Fondo oscuro para el encabezado */
+  color: #70AF3A; /* Texto verde metálico */
+}
+
+/* Modo oscuro para el ícono y texto en los grupos de formulario */
+body.dark-mode .form-group .form-label {
+  color: #c0c0c0; /* Texto del ícono en gris claro */
+}
+
+/* Modo oscuro para las tarjetas del formulario */
+body.dark-mode .contact-form-card {
+  background: #2c2c2c; /* Fondo oscuro metálico para la tarjeta */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Sombra verde metálica */
+}
+
+/* Modo oscuro para el modal */
+body.dark-mode .modal-content {
+  background: #1a1a1a; /* Fondo oscuro para el modal */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 10px; /* Bordes redondeados del modal */
+}
+
+body.dark-mode .modal-header {
+  background: #70AF3A; /* Fondo verde para el encabezado del modal */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-mode .modal-footer {
+  background: #2c2c2c; /* Fondo oscuro para el pie de página del modal */
+  border-top: 1px solid #444; /* Borde superior oscuro */
+}
+
+body.dark-mode .modal-footer .btn-secondary {
+  background: #4b4b4b; /* Color del botón de cerrar */
+}
+
+body.dark-mode .modal-footer .btn-secondary:hover {
+  background: #3c3c3c; /* Color del botón de cerrar en hover */
+}
+
+body.dark-mode .modal-body.success {
+  color: #28a745; /* Color verde metálico para el texto de éxito */
+}
+
+body.dark-mode .modal-body.danger {
+  color: #dc3545; /* Color rojo para el texto de error */
+}
+
+/* Estilos para el mapa en modo oscuro */
+body.dark-mode .leaflet-container {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4); /* Sombra verde metálica */
+}
+
+/* Estilos del ícono de ubicación en modo oscuro */
+body.dark-mode .location-icon .fa-map-marker-alt {
+  color: #70AF3A; /* Color verde metálico */
+}
+
+/* Estilo del pulso en el ícono de ubicación en modo oscuro */
+body.dark-mode .location-icon .pulse {
+  background: rgba(112, 175, 58, 0.6); /* Verde metálico semitransparente */
+  box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.3); /* Borde verde metálico */
+}
+
+/* Estilos para el contenido del popup en pantallas pequeñas en modo oscuro */
+@media (max-width: 768px) {
+  body.dark-mode .contact-page {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  body.dark-mode .map-container {
+    width: 100%;
+    height: 55vh; /* Ajustar la altura del mapa */
+  }
+
+  body.dark-mode .form-container {
+    width: 100%;
+    height: 70vh; /* Ajustar la altura del formulario */
+    padding: 1rem;
+    background: rgba(28, 28, 28, 0.9); /* Fondo oscuro y semitransparente */
+    box-shadow: none;
+    overflow-y: auto;
+    color: #ffffff; /* Texto blanco */
+  }
+
+  body.dark-mode .contact-form-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Sombra verde metálica */
+  }
+
+  body.dark-mode .contact-form-card .card-body {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+@media (max-height: 500px) {
+  body.dark-mode .map-container {
+    height: 40vh; /* Ajustar la altura del mapa para pantallas bajas */
+  }
+
+  body.dark-mode .form-container {
+    height: 70vh; /* Ajustar la altura del formulario para pantallas bajas */
+  }
+}
+
+
+
+/* Modo oscuro para la página de contacto */
+body.dark-mode .contact-page {
+  background-color: #121212; /* Fondo oscuro para la página */
+  color: #ffffff; /* Texto blanco para contraste */
+}
+
+/* Modo oscuro para el contenedor del mapa */
+body.dark-mode .map-container {
+  background: #1a1a1a; /* Fondo oscuro metálico */
+}
+
+/* Modo oscuro para el contenedor del formulario */
+body.dark-mode .form-container {
+  background: rgba(28, 28, 28, 0.9); /* Fondo oscuro y semitransparente */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); /* Sombra verde metálica */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Modo oscuro para el encabezado del formulario */
+body.dark-mode .contact-form-header {
+  background-color: #1b1b1b; /* Fondo oscuro para el encabezado */
+  color: #70AF3A; /* Texto verde metálico */
+}
+
+/* Modo oscuro para el ícono y texto en los grupos de formulario */
+body.dark-mode .form-group .form-label {
+  color: #c0c0c0; /* Texto del ícono en gris claro */
+}
+
+/* Modo oscuro para las tarjetas del formulario */
+body.dark-mode .contact-form-card {
+  background: linear-gradient(145deg, #0c0c0c, #172015); /* Gradiente metálico oscuro */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(13, 63, 13, 0.5); /* Sombra verde metálica */
+}
+
+/* Modo oscuro para el modal */
+body.dark-mode .modal-content {
+  background: #1a1a1a; /* Fondo oscuro para el modal */
+  color: #ffffff; /* Texto blanco */
+  border-radius: 10px; /* Bordes redondeados del modal */
+}
+
+body.dark-mode .modal-header {
+  background: #70AF3A; /* Fondo verde para el encabezado del modal */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+body.dark-mode .modal-footer {
+  background: #2c2c2c; /* Fondo oscuro para el pie de página del modal */
+  border-top: 1px solid #444; /* Borde superior oscuro */
+}
+
+body.dark-mode .modal-footer .btn-secondary {
+  background: #4b4b4b; /* Color del botón de cerrar */
+}
+
+body.dark-mode .modal-footer .btn-secondary:hover {
+  background: #3c3c3c; /* Color del botón de cerrar en hover */
+}
+
+body.dark-mode .modal-body.success {
+  color: #ffffff !important; /* Color verde metálico para el texto de éxito */
+}
+
+body.dark-mode .modal-body.danger {
+  color: #dc3545 !important; /* Color rojo para el texto de error */
+}
+
+/* Estilos para el mapa en modo oscuro */
+body.dark-mode .leaflet-container {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 255, 0, 0.4); /* Sombra verde metálica */
+}
+
+/* Estilos del ícono de ubicación en modo oscuro */
+body.dark-mode .location-icon .fa-map-marker-alt {
+  color: #70AF3A; /* Color verde metálico */
+}
+
+/* Estilo del pulso en el ícono de ubicación en modo oscuro */
+body.dark-mode .location-icon .pulse {
+  background: rgba(112, 175, 58, 0.6); /* Verde metálico semitransparente */
+  box-shadow: 0 0 0 2px rgba(0, 255, 0, 0.3); /* Borde verde metálico */
+}
+
+/* Estilos para el contenido del popup en pantallas pequeñas en modo oscuro */
+@media (max-width: 768px) {
+  body.dark-mode .contact-page {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  body.dark-mode .map-container {
+    width: 100%;
+    height: 55vh; /* Ajustar la altura del mapa */
+  }
+
+  body.dark-mode .form-container {
+    width: 100%;
+    height: 70vh; /* Ajustar la altura del formulario */
+    padding: 1rem;
+    background: rgba(28, 28, 28, 0.9); /* Fondo oscuro y semitransparente */
+    box-shadow: none;
+    overflow-y: auto;
+    color: #ffffff; /* Texto blanco */
+  }
+
+  body.dark-mode .contact-form-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5); /* Sombra verde metálica */
+  }
+
+  body.dark-mode .contact-form-card .card-body {
+    flex: 1;
+    overflow-y: auto;
+  }
+}
+
+@media (max-height: 500px) {
+  body.dark-mode .map-container {
+    height: 40vh; /* Ajustar la altura del mapa para pantallas bajas */
+  }
+
+  body.dark-mode .form-container {
+    height: 70vh; /* Ajustar la altura del formulario para pantallas bajas */
+  }
+}

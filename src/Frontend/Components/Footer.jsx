@@ -72,7 +72,7 @@ const Footer = () => {
                   <a href="#faculty" className="text-white">Fac. Medio Ambiente y Recursos Naturales</a>
                 </p>
                 <p>
-                  <a href="#university" className="text-white">Universidad Distrital</a>
+                  <a href="#university" className="text-white">Universidad Distrital Francisco Jose de Caldas</a>
                 </p>
                 <p>
                   <a href="#help" className="text-white">Ayuda</a>
@@ -84,8 +84,8 @@ const Footer = () => {
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                 <p><i className="fas fa-home mr-3"></i> Bogotá, UD 1111, Colombia</p>
                 <p><i className="fas fa-envelope mr-3"></i> redbacata@gmail.com</p>
-                <p><i className="fas fa-phone mr-3"></i> +01 234 567 88</p>
-                <p><i className="fas fa-print mr-3"></i> +01 234 567 89</p>
+                <p><i className="fas fa-phone mr-3"></i> + 57 310-205-63-42</p>
+                <p><i className="fas fa-print mr-3"></i> + 1329-1322 323-9300</p>
               </div>
             </div>
           </div>

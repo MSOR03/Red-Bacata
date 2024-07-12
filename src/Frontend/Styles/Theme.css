@@ -1,0 +1,63 @@
+/* src/Styles/Theme.css */
+
+/* Estilos generales */
+body {
+    background-color: #f0f0f0; /* Fondo claro por defecto */
+    color: #333; /* Color del texto por defecto */
+  }
+  
+  /* Modo oscuro */
+  .dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Color del texto oscuro */
+  }
+  
+  /* Estilos de fondo del mapa en modo oscuro */
+  .dark-mode .map-container {
+    background: #2c2c2c; /* Fondo del contenedor del mapa en modo oscuro */
+  }
+  
+  /* Estilos del footer en modo oscuro */
+  .dark-mode .footer-container {
+    background-color: #1a1a1a; /* Fondo del footer en modo oscuro */
+  }
+  
+  /* Estilos del footer en modo oscuro */
+  .dark-mode .footer-info {
+     /* Imagen de fondo para modo oscuro */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Estilos de botones y enlaces en modo oscuro */
+  .dark-mode a {
+    color: #bb86fc; /* Color de los enlaces en modo oscuro */
+  }
+  
+  .dark-mode a:hover {
+    color: #3700b3; /* Color del enlace en hover */
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #bb86fc; /* Color del botón primario */
+    border-color: #bb86fc; /* Color del borde del botón primario */
+  }
+  
+  .dark-mode .btn-primary:hover {
+    background-color: #3700b3; /* Color del botón primario en hover */
+    border-color: #3700b3; /* Color del borde del botón primario en hover */
+  }
+  
+  /* Otros estilos de modo oscuro */
+  .dark-mode .contact-form-card {
+    background-color: #1e1e1e; /* Fondo de la tarjeta de contacto */
+    border-color: #333; /* Color del borde de la tarjeta de contacto */
+  }
+  
+  .dark-mode .card-header {
+    background-color: #333; /* Fondo del header de la tarjeta */
+    color: #fff; /* Color del texto del header de la tarjeta */
+  }
+  
+ 

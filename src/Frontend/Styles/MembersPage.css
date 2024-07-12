@@ -1,3 +1,4 @@
+/* Estilos generales para .members-page-container */
 .members-page-container {
   padding: 2rem;
   background: #ffffff; /* Fondo blanco */
@@ -53,4 +54,162 @@
     flex: 0 1 100%; /* Ajustar el ancho para pantallas pequeñas */
     max-width: 100%;
   }
+}
+
+/* Estilos para el modo oscuro en .members-page-container */
+body.dark-mode .members-page-container {
+  padding: 2rem;
+  background: #2a2a2a; /* Fondo oscuro */
+  border-top: 5px solid #70AF3A; /* Línea verde en la parte superior */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  margin-top: 0rem; /* Separación superior */
+  transition: all 0.3s ease; /* Transición para los cambios */
+  margin-left: 10px;
+  color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .members-page-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Mayor sombra en hover */
+}
+
+body.dark-mode .members-page-title {
+  color: #70AF3A; /* Color verde para el título */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Tamaño de letra grande */
+  border-bottom: 2px solid #70AF3A; /* Línea verde debajo del título */
+  padding-bottom: 0.5rem;
+}
+
+/* Ajustes para el contenedor de las tarjetas en modo oscuro */
+body.dark-mode .container {
+  padding: 0;
+}
+
+body.dark-mode .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+}
+
+body.dark-mode .col-md-4 {
+  flex: 0 1 30%; /* Ajustar el ancho para pantallas grandes */
+  max-width: 30%;
+  margin-bottom: 2rem; /* Espacio inferior entre tarjetas */
+  padding: 0 15px; /* Espacio entre tarjetas */
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  body.dark-mode .col-md-4 {
+    flex: 0 1 45%; /* Ajustar el ancho para pantallas medianas */
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .col-md-4 {
+    flex: 0 1 100%; /* Ajustar el ancho para pantallas pequeñas */
+    max-width: 100%;
+  }
+}
+
+/* Estilos para tarjetas en modo oscuro */
+body.dark-mode .card {
+  background: linear-gradient(145deg, #3b3b3b, #2a2a2a); /* Gradiente metálico oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  max-width: 600px; /* Ancho máximo de la tarjeta */
+}
+
+/* Efecto de hover con resplandor metálico */
+body.dark-mode .card:hover {
+  box-shadow: 0 0 20px rgba(0, 150, 136, 0.7), 0 0 30px rgba(0, 150, 136, 0.4); /* Efecto de resplandor verde metálico */
+  transform: translateY(-10px);
+  z-index: 2;
+  filter: brightness(1.1); /* Agregar un ligero brillo alrededor de la tarjeta */
+}
+
+/* Estilo del contenido de la tarjeta */
+body.dark-mode .card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+/* Estilo del texto de descripción en el modo oscuro */
+body.dark-mode .descriptionText {
+  color: #e0e0e0; /* Texto claro para la descripción */
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Estilo de la imagen en la parte superior de la tarjeta */
+body.dark-mode .overflow {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+body.dark-mode .card-img-top {
+  width: 100%;
+  height: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .card-img-top:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo del título de la tarjeta */
+body.dark-mode .card-title {
+  color: #70AF3A; /* Verde metálico para el título */
+  margin-bottom: 10px;
+}
+
+/* Estilo del botón en el modo oscuro */
+body.dark-mode .btn {
+  background-color: #70AF3A; /* Fondo verde para el botón */
+  color: white; /* Texto blanco para el botón */
+  transition: all 0.3s ease;
+}
+
+/* Efecto de hover en el botón */
+body.dark-mode .btn:hover {
+  background-color: #5b8c2a; /* Un tono más oscuro de verde para el hover del botón */
+  color: white;
+}
+
+/* Estilo del texto de la tarjeta en el modo oscuro */
+body.dark-mode .card-text {
+  color: #b0b0b0; /* Texto gris claro */
+}
+
+/* Estilo del botón primario en el modo oscuro */
+body.dark-mode .btn-primary {
+  background-color: #70AF3A; /* Fondo verde para el botón primario */
+  border-color: #70AF3A; /* Borde verde */
+}
+
+body.dark-mode .btn-primary:hover {
+  background-color: #5f8c2a; /* Verde oscuro en hover */
+  border-color: #5f8c2a; /* Borde verde oscuro */
+}
+
+/* Estilo del botón secundario en el modo oscuro */
+body.dark-mode .btn-secondary {
+  background-color: #444; /* Fondo oscuro para botones secundarios */
+  color: #e0e0e0; /* Texto claro */
+}
+
+body.dark-mode .btn-secondary:hover {
+  background-color: #555; /* Fondo más oscuro en hover */
 }

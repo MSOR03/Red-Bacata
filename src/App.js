@@ -15,9 +15,12 @@ function App() {
   return (
     <Router>
       <div className="app-container">
+      
         <div className="background-image"></div>
         <NavBar />
+        
         <Routes>
+        
 
           <Route path='/' element={<HomePage />} />
           <Route path='/MembersPage' element={<MembersPage />} />
