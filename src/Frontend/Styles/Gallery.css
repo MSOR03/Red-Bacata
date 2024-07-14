@@ -1,77 +1,74 @@
 /* src/Styles/Gallery.css */
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0px; /* Controla el espacio entre elementos */
-    padding: 20px; /* Ajusta el espacio alrededor de la galería */
-  }
-  
-  .gallery-item {
-    position: relative;
-    margin: 5px; /* Reducir el margen entre elementos */
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Para que el contenido no se salga del borde redondeado */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido para dar un efecto de sombra */
-  }
-  
-  .gallery-item img {
-    width: 300px; /* Mantén el tamaño de la imagen */
-    height: 300px; /* Mantén el tamaño de la imagen */
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 10px; /* Mantiene los bordes redondeados en las imágenes */
-  }
-  
-  .gallery-item h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el texto */
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-    opacity: 0; /* Oculta el texto inicialmente */
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  .gallery-item:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño del elemento al hacer hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifica la sombra al hacer hover */
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .gallery-item:hover h3 {
-    opacity: 1; /* Muestra el texto al hacer hover */
-    transform: translate(-50%, -50%) scale(1.1); /* Agranda ligeramente el texto al hacer hover */
-  }
-  
-  .modal-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Da un efecto de sombra */
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos */
+  gap: 0px; /* Controla el espacio entre elementos */
+  padding: 20px; /* Ajusta el espacio alrededor de la galería */
+}
 
-  
+.gallery-item {
+  position: relative;
+  margin: 5px; /* Reducir el margen entre elementos */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Para que el contenido no se salga del borde redondeado */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido para dar un efecto de sombra */
+}
 
-  /* src/Styles/Gallery.css */
+.gallery-item img {
+  width: 300px; /* Mantén el tamaño de la imagen */
+  height: 300px; /* Mantén el tamaño de la imagen */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 10px; /* Mantiene los bordes redondeados en las imágenes */
+}
+
+.gallery-item h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto */
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0; /* Oculta el texto inicialmente */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño del elemento al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Intensifica la sombra al hacer hover */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover h3 {
+  opacity: 1; /* Muestra el texto al hacer hover */
+  transform: translate(-50%, -50%) scale(1.1); /* Agranda ligeramente el texto al hacer hover */
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Da un efecto de sombra */
+}
 
 /* Galería en modo oscuro */
 body.dark-mode .gallery {
   background: #1e1e1e; /* Fondo oscuro para la galería */
   padding: 20px; /* Ajusta el espacio alrededor de la galería */
+  align-items: center;
 }
 
 /* Elementos de la galería en modo oscuro */
@@ -118,36 +115,35 @@ body.dark-mode .modal-image {
 
 /* Galería en pantallas pequeñas */
 @media (max-width: 768px) {
-body.dark-mode .gallery {
-  padding: 10px; /* Reducir el espacio alrededor de la galería */
-}
+  .gallery {
+    padding: 10px; /* Reducir el espacio alrededor de la galería */
+  }
 
-body.dark-mode .gallery-item {
-  margin: 2px; /* Reducir el margen entre elementos */
-}
+  .gallery-item {
+    margin: 2px; /* Reducir el margen entre elementos */
+  }
 
-body.dark-mode .gallery-item img {
-  width: 100%; /* Ajustar el ancho de la imagen a la pantalla */
-  height: 200px; /* Mantener una altura fija */
-}
+  .gallery-item img {
+    width: calc(100% - 4px); /* Ajustar el ancho de la imagen a la pantalla */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
 }
 
 /* Galería en pantallas muy pequeñas */
 @media (max-width: 480px) {
-body.dark-mode .gallery {
-  padding: 5px; /* Reducir aún más el espacio alrededor de la galería */
-}
+  .gallery {
+    padding: 5px; /* Reducir aún más el espacio alrededor de la galería */
+  }
 
-body.dark-mode .gallery-item {
-  margin: 1px; /* Reducir el margen entre elementos */
-}
+  .gallery-item {
+    margin: 1px; /* Reducir el margen entre elementos */
+  }
 
-body.dark-mode .gallery-item img {
-  height: 150px; /* Ajustar la altura de la imagen */
+  .gallery-item img {
+    height: auto; /* Ajustar la altura de la imagen */
+    width: calc(100% - 2px); /* Ajustar el ancho de la imagen */
+  }
 }
-}
-
-/* src/Styles/Gallery.css */
 
 /* Estilos para el modal en modo oscuro */
 body.dark-mode .modal-content {

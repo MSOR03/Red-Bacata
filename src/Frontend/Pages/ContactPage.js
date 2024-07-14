@@ -12,6 +12,7 @@ const ContactPage = () => {
       <div className="map-container">
         <Map/>
       </div>
+      <section id='formulario'>
       <div className="form-container">
         <Card className="contact-form-card">
           <Card.Header className="contact-form-header">
@@ -23,6 +24,7 @@ const ContactPage = () => {
         </Card>
       </div>
       <WhatsAppButton />
+      </section>
     </div>
   );
 }

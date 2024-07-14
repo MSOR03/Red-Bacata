@@ -1,111 +1,111 @@
 .card {
-    background-color: #f0f5f9; /* Fondo de la tarjeta */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    max-width: 600px; /* Ancho máximo de la tarjeta */
+    background-color: #f0f5f9 !important; /* Fondo de la tarjeta */
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex ;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 600px !important; /* Ancho máximo de la tarjeta */
   }
 
   .card:hover {
-    background: linear-gradient(135deg, #031020, #1d5e2c);
-    color: white;
-    box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3); /* Efecto de alumbre */
-    transform: translateY(-10px);
-    z-index: 2;
-    filter: brightness(1.1);
+    background: linear-gradient(135deg, #031020, #1d5e2c) ;
+    color: white !important;
+    box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3) !important; /* Efecto de alumbre */
+    transform: translateY(-10px) !important;
+    z-index: 2 !important;
+    filter: brightness(1.1) !important;
 }
 
 .card:hover .descriptionText,
 .card:hover .card-title,
 .card:hover .btn {
-    color: white;
+    color: white !important;
 }
   
   .card:hover {
-    box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3); /* Efecto de alumbre */
-    transform: translateY(-10px);
-    z-index: 2;
+    box-shadow: 0 0 15px 5px rgba(112, 175, 58, 0.5), 0 0 20px 10px rgba(112, 175, 58, 0.3) ; /* Efecto de alumbre */
+    transform: translateY(-10px) ;
+    z-index: 2 ;
   }
   
   .card-body {
-    padding: 1rem;
-    flex-grow: 1;
+    padding: 1rem !important;
+    flex-grow: 1 !important;
   }
   
   .descriptionText {
-    color: #333; /* Texto en color oscuro */
-    font-size: 15px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    color: #333 ; /* Texto en color oscuro */
+    font-size: 15px !important;
+    font-family: Arial, sans-serif !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
   }
   
   .overflow {
-    overflow: hidden;
-    border-radius: 8px;
+    overflow: hidden !important;
+    border-radius: 8px !important;
   }
   
   .card-img-top {
-    width: 100%;
-    height: auto;
-    transition: all 0.2s ease-in-out;
+    width: 100% !important;
+    height: auto !important;
+    transition: all 0.2s ease-in-out !important;
   }
   
   .card-img-top:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
   }
   
   .card-title {
-    color: #70AF3A; /* Verde para el título */
-    margin-bottom: 10px;
+    color: #70AF3A !important; /* Verde para el título */
+    margin-bottom: 10px !important;
   }
   
   .btn {
-    background-color: #70AF3A; /* Fondo verde para el botón */
-    color: white; /* Texto blanco para el botón */
-    transition: all 0.3s ease;
+    background-color: #70AF3A !important; /* Fondo verde para el botón */
+    color: white !important; /* Texto blanco para el botón */
+    transition: all 0.3s ease !important;
   }
   
   .btn:hover {
-    background-color: #5b8c2a; /* Un tono más oscuro de verde para el hover del botón */
-    color: white;
+    background-color: #5b8c2a !important; /* Un tono más oscuro de verde para el hover del botón */
+    color: white !important;
   }
   
   .card:hover {
-    box-shadow: 0 0 15px rgba(0, 150, 136, 0.7); /* Efecto de resplandor verde */
-    transform: translateY(-10px);
-    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 150, 136, 0.7) !important; /* Efecto de resplandor verde */
+    transform: translateY(-10px) !important;
+    z-index: 2 !important;
     /* Agregar un ligero brillo alrededor de la tarjeta */
-    filter: brightness(1.1);
+    filter: brightness(1.1) !important;
   }
   
   .card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 100%;
-    max-width: 600px; /* Ancho máximo de la tarjeta */
+    background-color: white !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 600px !important; /* Ancho máximo de la tarjeta */
   }
   
   /* Efecto de resplandor en el hover */
   .card:hover {
-    box-shadow: 0 0 15px rgba(0, 150, 136, 0.7); /* Efecto de resplandor verde */
-    transform: translateY(-10px);
-    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 150, 136, 0.7)!important; /* Efecto de resplandor verde */
+    transform: translateY(-10px)!important;
+    z-index: 2 !important;
     /* Agregar un ligero brillo alrededor de la tarjeta */
-    filter: brightness(1.1);
+    filter: brightness(1.1) !important;
   }
   
 /* Estilos para el modo oscuro en tarjetas con efecto metálico oscuro */
@@ -125,7 +125,7 @@ body.dark-mode .card {
 
 /* Efecto de hover con resplandor metálico */
 body.dark-mode .card:hover {
-  box-shadow: 0 0 20px rgba(0, 150, 136, 0.7), 0 0 30px rgba(0, 150, 136, 0.4); /* Efecto de resplandor verde metálico */
+  box-shadow: 0 0 20px rgba(0, 150, 136, 0.7), 0 0 30px rgba(0, 150, 136, 0.4) !important; /* Efecto de resplandor verde metálico */
   transform: translateY(-10px);
   z-index: 2;
   filter: brightness(1.1); /* Agregar un ligero brillo alrededor de la tarjeta */

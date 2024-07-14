@@ -28,7 +28,7 @@ const Map = () => {
         <Marker position={position} icon={customIcon}>
           <Popup>
             <div>
-              <h3>Universidad Distrital Francisco José de Caldas sede Vivero</h3>
+              <h6>Universidad Distrital Francisco José de Caldas sede Vivero</h6>
               <p>Cra. 5 #15-82, Bogotá<br />Bogotá, Colombia.</p>
               <img src={campusImage} alt="Campus" style={{ width: '40%', height: '30%', borderRadius: '8px' }} />
             </div>

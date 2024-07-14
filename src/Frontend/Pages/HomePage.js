@@ -3,8 +3,6 @@ import Slider from '../Components/Slider';
 import image1 from '../Images/slider1.jpg';
 import image2 from '../Images/slider2.jpg';
 import image3 from '../Images/slider3.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faTasks } from '@fortawesome/free-solid-svg-icons';
 import '../Styles/SimpleCards.css';
 import '../Styles/HomeStyle.css';
 
@@ -31,27 +29,14 @@ const HomePage = () => {
   ];
 
   // Función para dividir el texto en letras y aplicar el efecto de animación
-  const addAnimation = (text) => {
-    return text.split('').map((char, index) => (
-      <span key={index} style={{ '--index': index }}>{char}</span>
-    ));
-  };
-
-  // Añadimos el efecto de animación a los textos de cada slide
-  const transformedSlides = slides.map(slide => ({
-    ...slide,
-    title: addAnimation(slide.title),
-    subtitle: addAnimation(slide.subtitle),
-    description: addAnimation(slide.description)
-  }));
-
+ 
   return (
     <div>
-      <Slider slides={transformedSlides} />
+       <Slider slides={slides} />
       <div className="cards-container">
         <section className="card" id='objetivo'>
           <h3 className="card-title">Objetivo</h3>
-          <p className="card-description">Nuestra misión es promover la transformación social y territorial a través de la Investigación-Acción Participativa (IAP) y la Inteligencia Territorial. Nos dedicamos a generar conocimiento práctico y aplicable que empodere a las comunidades locales, fomente la colaboración entre actores diversos y fortalezca la toma de decisiones informadas. A través de la investigación colaborativa y el análisis territorial, buscamos impulsar el desarrollo sustentable, la justicia social y la resiliencia de los territorios.</p>
+          <p className="card-description">Nuestra visión es ser una red que articula grupos de investigación de la Universidad Distrital Francisco José de Caldas de referencia nacional en la transformación social y territorial mediante enfoques participativos y colaborativos. Aspiramos a crear un mundo en el que las comunidades locales sean protagonistas de su propio desarrollo, utilizando herramientas de inteligencia territorial para abordar desafíos complejos y construir futuros sostenibles. Nos comprometemos a ser un puente entre el conocimiento académico y la acción comunitaria, promoviendo la equidad, la inclusión y la innovación en todos los niveles de la sociedad.</p>
         </section>
         <section className="card" id='mision'>
           <h3 className="card-title">Misión</h3>
@@ -65,7 +50,7 @@ const HomePage = () => {
       </div>
       <section className="about-section" id='nosotros'>
         <div className="about-text">
-          <h2><FontAwesomeIcon icon={faUsers} /> Sobre Nosotros</h2>
+          <h2>Sobre Nosotros</h2>
           <h1>Innovación y Desarrollo</h1>
           <p>Nuestra red de investigación nace en el año 2012 a partir de la reunión  de los grupos de investigación pertenecientes a las diferentes facultades de  la Universidad Distrital Francisco José de Caldas. Su nombre se constituye teniendo en cuenta el territorio Muisca que comprendía la mayor de San Antonio de tequendama, parte de lo que ahora se conoce como la sabana de Bogotá.
           Los iconos elegidos para la representación de la red en conjunto, muestran la conexión del hombre ("El hombre feliz", icono representativo de San Antonio del tequendama) con el territorio (la montaña) y el conocimiento ancestral y cientifico del mismo (el triangulo de la sabiduría)</p>
@@ -86,7 +71,7 @@ const HomePage = () => {
       </section>
       {/* Sección de Plan de Acción */}
       <section className="action-plan-section" id='plan-de-accion'>
-        <h2><FontAwesomeIcon icon={faTasks} /> Plan de Acción</h2>
+        <h2>Plan de Acción</h2>
         <div className="action-plan-container">
           <div className="action-plan-step">
             <div className="step-number">1</div>

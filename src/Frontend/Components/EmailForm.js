@@ -62,7 +62,7 @@ const EmailForm = () => {
               <Form.Control
                 type="text"
                 name="firstName"
-                id="firstName"
+                
                 placeholder="Tu Nombre"
                 value={form.firstName}
                 onChange={handleChange}
@@ -76,7 +76,7 @@ const EmailForm = () => {
               <Form.Control
                 type="text"
                 name="lastName"
-                id="lastName"
+            
                 placeholder="Tu Apellido"
                 value={form.lastName}
                 onChange={handleChange}
@@ -90,7 +90,7 @@ const EmailForm = () => {
           <Form.Control
             type="email"
             name="email"
-            id="email"
+            
             placeholder="Tu Correo Electrónico"
             value={form.email}
             onChange={handleChange}
@@ -102,7 +102,7 @@ const EmailForm = () => {
           <Form.Control
             type="text"
             name="subject"
-            id="subject"
+            
             placeholder="Asunto"
             value={form.subject}
             onChange={handleChange}
@@ -115,7 +115,7 @@ const EmailForm = () => {
             as="textarea"
             rows={3}
             name="message"
-            id="message"
+            
             placeholder="Tu Mensaje"
             value={form.message}
             onChange={handleChange}

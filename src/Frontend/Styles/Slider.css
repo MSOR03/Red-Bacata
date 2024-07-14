@@ -1,123 +1,154 @@
 /* Estilo para las imágenes del carousel */
 .carousel-item img {
-    height: 100vh;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out; /* Duración de la transición */
-    border-radius: 10px;
-    
-  }
-  
-  /* Efecto de desvanecimiento */
-  .carousel-item-next,
-  .carousel-item-prev,
-  .carousel-item.active {
-    opacity: 1;
-    transition: opacity 1s ease-in-out; /* Duración de la transición */
-  }
-  
-  .carousel-item-next.carousel-item-left,
-  .carousel-item-prev.carousel-item-right {
-    opacity: 0; /* Hace la imagen transparente durante la transición */
-  }
-  
-  /* Estilo para el fondo durante la transición */
-  .carousel-item-next:before,
-  .carousel-item-prev:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de opacidad */
-    z-index: 0;
-  }
-  
-  /* Asegura que el efecto fade funcione correctamente */
-  .carousel-item-next,
-  .carousel-item-prev,
-  .carousel-item.active {
-    opacity: 1;
-    transition: opacity 1s ease-in-out; /* Duración de la transición */
-  }
-  
-  /* Estilo para los controles del carousel */
-  .carousel-control-prev,
-  .carousel-control-next {
-    filter: invert(1);  /* Asegura que las flechas sean visibles sobre el overlay oscuro */
-  }
-  
-  /* Estilo para los indicadores del carousel */
-  .carousel-indicators [data-bs-target] {
-    background-color: #fff;  /* Indicadores blancos */
-  }
-  
-  /* Añadir el overlay */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
-    z-index: 1;
-    border-radius: 10px;
-  }
-  
-  /* Estilo para el contenido del carousel */
-  .carousel-caption {
-    z-index: 2;
-    bottom: 20%;
-    left: 10%;
-    text-align: left;
-    color: #fff;
-  }
-  
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  object-fit: cover; /* Ajusta la imagen para cubrir el área del slider */
+  transition: opacity 1s ease-in-out; /* Duración de la transición */
+  border-radius: 10px; /* Bordes redondeados */
+}
 
-  /* Estilos para los textos */
-  .animated-title,
-  .animated-subtitle,
-  .animated-description {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Ajustado a 0.3s para mayor rapidez */
-  }
+/* Efecto de desvanecimiento */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Duración de la transición */
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  opacity: 0; /* Hace la imagen transparente durante la transición */
+}
+
+/* Estilo para el fondo durante la transición */
+.carousel-item-next:before,
+.carousel-item-prev:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con 50% de opacidad */
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* Asegura que el efecto fade funcione correctamente */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  opacity: 1;
+  transition: opacity 1s ease-in-out; /* Duración de la transición */
+}
+
+/* Estilo para los controles del carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(1);  /* Asegura que las flechas sean visibles sobre el overlay oscuro */
+}
+
+/* Estilo para los indicadores del carousel */
+.carousel-indicators [data-bs-target] {
+  background-color: #fff;  /* Indicadores blancos */
+}
+
+/* Añadir el overlay */
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro con 65% de opacidad */
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Estilo para el contenido del carousel */
+.carousel-caption {
+  z-index: 2;
+  bottom: 20%;
+  left: 10%;
+  text-align: left;
+  color: #fff;
+}
+
+/* Estilos para los textos */
+.animated-title,
+.animated-subtitle,
+.animated-description {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Ajustado a 0.6s para una animación más suave */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Sombra para mejorar la visibilidad */
+}
+
+/* Efecto de caída de letras */
+.animated-title span,
+.animated-subtitle span,
+.animated-description span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fall 0.6s ease forwards;  /* Ajustado a 0.6s para una animación más suave */
+}
+
+/* Se añaden tiempos de retraso */
+.animated-title span {
+  animation-delay: calc(var(--index) * 0.05s); /* Retraso para las letras del título */
+  font-weight: bold; /* Negrita para el título */
+  font-size: 5rem ; /* Tamaño del título aumentado */
+}
+
+.animated-subtitle span {
+  font-size: 6rem !important; /* Tamaño del subtítulo aumentado */
+  animation-delay: calc(var(--index) * 0.07s); /* Retraso para las letras del subtítulo */
+  color: #87CEFA; /* Color azul claro para el subtítulo */
+  font-weight: 1; /* Semi-negrita para el subtítulo */
+}
+
+.animated-description span {
+  animation-delay: calc(var(--index) * 0.05s); /* Retraso para las letras de la descripción */
+  color: #FFFFFF; /* Color blanco para la descripción */
+  font-size: 3rem; /* Tamaño de la descripción aumentado */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo adicional para el título */
+.animated-title {
+  font-family: 'Arial', sans-serif; /* Fuente Arial para el título */
+  font-size: 2.3rem ;
   
-  /* Efecto de caída de letras */
-  .animated-title span,
-  .animated-subtitle span,
-  .animated-description span {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fall 0.5s ease forwards;  /* Ajustado a 0.5s para mayor rapidez */
-  }
+}
+
+/* Estilo adicional para el subtítulo */
+.animated-subtitle {
+  font-family: 'Georgia', serif; /* Fuente Georgia para el subtítulo */
+  margin-top: 10px; /* Espaciado superior */
+  font-size: 2.8rem;
+  font-weight: 550;
   
-  /* Se añaden tiempos de retraso */
-  .animated-title span {
-    animation-delay: calc(var(--index) * 0.03s); /* Aumento en la rapidez de aparición de las letras */
-  }
-  
-  .animated-subtitle span {
-    font-size: 3rem;
-    animation-delay: calc(var(--index) * 0.07s); /* Aumento en la rapidez de aparición de las letras */
-  }
-  
-  .animated-description span {
-    animation-delay: calc(var(--index) * 0.05s); /* Aumento en la rapidez de aparición de las letras */
-  }
-  
-  @keyframes fall {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .carousel-item.active .animated-title,
-  .carousel-item.active .animated-subtitle,
-  .carousel-item.active .animated-description {
+}
+
+/* Estilo adicional para la descripción */
+.animated-description {
+  font-family: 'Verdana', sans-serif; /* Fuente Verdana para la descripción */
+  margin-top: 10px; /* Espaciado superior */
+  font-size: 1.5;
+}
+
+/* Animación de caída */
+@keyframes fall {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
-  
+}
+
+/* Asegura que el texto animado sea visible en el slide activo */
+.carousel-item.active .animated-title,
+.carousel-item.active .animated-subtitle,
+.carousel-item.active .animated-description {
+  opacity: 1;
+  transform: translateY(0);
+}

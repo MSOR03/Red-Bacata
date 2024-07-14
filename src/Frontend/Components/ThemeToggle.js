@@ -27,13 +27,13 @@ const ThemeToggle = () => {
         <div className="icon-text-container">
           {isDarkMode ? (
             <>
-              <span className="text">Dark</span>
+              <span className="text">Oscuro</span>
               <FontAwesomeIcon icon={faMoon} className="icon moon-icon" />
             </>
           ) : (
             <>
               <FontAwesomeIcon icon={faSun} className="icon sun-icon" />
-              <span className="text">Light</span>
+              <span className="text">Claro</span>
             </>
           )}
         </div>

@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Sección de enlaces y texto */}
         <section className="footer-info bg-dark text-white py-4">
           <div className="container footer-info-content">
@@ -44,7 +44,7 @@ const Footer = () => {
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                 <p>Red de investigación sobre el territorio y sus peculiaridades formada por docentes de la Universidad Distrital.</p>
               </div>
-              
+
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold">Servicios</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
@@ -61,36 +61,44 @@ const Footer = () => {
                   <a href="#internships" className="text-white">Pasantías</a>
                 </p>
               </div>
-              
+
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 className="text-uppercase fw-bold">Dependencias</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                 <p>
-                  <a href="#red-bacata-ud" className="text-white">Red Bacatá UD</a>
+                  <a href="https://comunidad.udistrital.edu.co/investudcn10/red-bacata-it/" className="text-white">Red Bacatá UD</a>
                 </p>
                 <p>
-                  <a href="#faculty" className="text-white">Fac. Medio Ambiente y Recursos Naturales</a>
+                  <a href="https://fambiental.udistrital.edu.co/" className="text-white">Facultad Medio Ambiente y Recursos Naturales</a>
                 </p>
                 <p>
-                  <a href="#university" className="text-white">Universidad Distrital Francisco Jose de Caldas</a>
+                  <a href="https://www.udistrital.edu.co/inicio" className="text-white">Universidad Distrital Francisco Jóse de Caldas</a>
                 </p>
                 <p>
                   <a href="#help" className="text-white">Ayuda</a>
                 </p>
               </div>
-              
+
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 className="text-uppercase fw-bold">Contacto</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
-                <p><i className="fas fa-home mr-3"></i> Bogotá, UD 1111, Colombia</p>
-                <p><i className="fas fa-envelope mr-3"></i> redbacata@gmail.com</p>
+                <p>
+                  <a className='text-white' href="https://www.google.com/maps/place/Universidad+Distrital+Francisco+Jos%C3%A9+de+Caldas+-+Sede+Vivero/@4.5971488,-74.0671634,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f99baafbff511:0x5038a78cdb954036!8m2!3d4.5971488!4d-74.0645885!16s%2Fg%2F11bx2l1qtz?entry=ttu" target="_blank" rel="noopener noreferrer">
+                    <i className="fas fa-home mr-3"></i>Cra. 5 #15-82, Bogotá
+                  </a>
+                </p>
+                <p>
+                  <a className='text-white' href="mailto:redbacatait@gmail.com">
+                    <i className="fas fa-envelope mr-3"></i> redbacatait@gmail.com
+                  </a>
+                </p>
                 <p><i className="fas fa-phone mr-3"></i> + 57 310-205-63-42</p>
-                <p><i className="fas fa-print mr-3"></i> + 1329-1322 323-9300</p>
+                <p><i className="fas fa-print mr-3"></i> + 13 29-1322 323-9300</p>
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Sección de pie de página */}
         <div className="footer-bottom py-3">
           <div className="container text-center">
@@ -98,7 +106,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 };
 

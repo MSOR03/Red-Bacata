@@ -6,7 +6,7 @@ const CustomAccordion = ({ items }) => {
   return (
     <Accordion className="custom-accordion">
       {items.map((item, index) => (
-        <Accordion.Item key={index} eventKey={index} className="custom-accordion-item">
+        <Accordion.Item key={index} eventKey={index} id={`guide-${item.id}`} className="custom-accordion-item">
           <Accordion.Header className="accordion-header-content" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
             <h2>{item.title}</h2>
           </Accordion.Header>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "../Styles/Card.css";
 import hoverSoundFile from "../Sounds/click-21156.mp3"; // Importa el archivo de sonido
 
-function Card({ imageSource, title, text, url, pdfUrl }) {
+function Card({id, imageSource, title, text, url, pdfUrl }) {
     const playSound = () => {
       const audio = new Audio(hoverSoundFile);
       audio.play();
@@ -11,6 +11,7 @@ function Card({ imageSource, title, text, url, pdfUrl }) {
   
     return (
       <div 
+        id={id}
         className="card text-center animate__animated animate__fadeInUp"
         onMouseEnter={playSound}
       >
@@ -36,6 +37,7 @@ function Card({ imageSource, title, text, url, pdfUrl }) {
   }
   
   Card.propTypes = {
+    id:PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     text: PropTypes.string,
     url: PropTypes.string,
