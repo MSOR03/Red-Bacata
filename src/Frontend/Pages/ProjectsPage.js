@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectGrid from '../Components/ProjectGrid';
-import p1 from '../Images/civil.jpg'
+import p1 from '../Images/civil.jpg';
 import Slider from '../Components/Slider';
 
 const slides = [
@@ -8,7 +8,7 @@ const slides = [
         image: p1,
         title: 'Investigadores ',
         subtitle: 'Miembros del equipo Red Bacatá',
-        description: 'En nuestro equipo hay mas de doce investigadores altamente capacitados , a continuacion, se podran visualizar.'
+        description: 'En nuestro equipo hay mas de doce investigadores altamente capacitados, a continuación, se podrán visualizar.'
     },
 ];
 
@@ -46,11 +46,7 @@ const ProjectsPage = () => {
             <div>
                 <Slider slides={slides} />
                 <div className="projects-page-container">
-                    {projectsData.map(project => (
-                        <div key={project.id} id={`project-${project.id}`}>
-                            <ProjectGrid projects={projectsData} />
-                        </div>
-                    ))}
+                    <ProjectGrid projects={projectsData} />
                 </div>
             </div>
         </section>
