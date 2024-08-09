@@ -102,7 +102,7 @@ const Footer = () => {
         {/* Sección de pie de página */}
         <div className="footer-bottom py-3">
           <div className="container text-center">
-            © 2024 Copyright: Sebastián Olarte
+            © 2024 Copyright: React
           </div>
         </div>
       </footer>
