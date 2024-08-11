@@ -96,7 +96,7 @@ body.dark-mode .search-form .form-control::placeholder {
   position: relative; /* Necesario para el pseudo-elemento */
   padding-bottom: 5px; /* Añadir espacio para la línea */
   font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto a los enlaces */
-  margin-right: 10px; /* Añadir espacio entre los enlaces */
+  margin-right: 8px; /* Añadir espacio entre los enlaces */
   transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
 
