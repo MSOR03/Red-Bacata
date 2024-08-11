@@ -66,12 +66,29 @@ body.dark-mode .search-form .form-control::placeholder {
   top: 0; /* Asegúrate de que esté en la parte superior de la página */
   left: 0; /* Asegúrate de que esté alineado a la izquierda */
   width: 100%; /* Asegúrate de que el navbar ocupe todo el ancho de la página */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente el contenido */
+  align-items: center;
 }
 
-/* Contenedor de enlaces */
-.custom-navbar .navbar-nav {
-  margin-left: 0; /* Separar los enlaces del logo */
+@media (min-width: 992px) {
+  .custom-navbar {
+    justify-content: center; /* Centrar el contenido solo en pantallas grandes */
+  }
+
+  .custom-navbar .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1500px; /* Ajusta el ancho máximo del contenedor */
+  }
+
+  .custom-navbar .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 
 /* Cambiar el color de los enlaces del Navbar */
 .custom-navbar .navbar-nav .nav-link {
@@ -79,7 +96,7 @@ body.dark-mode .search-form .form-control::placeholder {
   position: relative; /* Necesario para el pseudo-elemento */
   padding-bottom: 5px; /* Añadir espacio para la línea */
   font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto a los enlaces */
-  margin-right: 17px; /* Añadir espacio entre los enlaces */
+  margin-right: 10px; /* Añadir espacio entre los enlaces */
   transition: color 0.3s ease, transform 0.3s ease; /* Transición suave */
 }
 
