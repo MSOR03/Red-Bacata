@@ -80,7 +80,7 @@ body.dark-mode .search-form .form-control::placeholder {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1500px; /* Ajusta el ancho máximo del contenedor */
+    max-width: 1200px; /* Ajusta el ancho máximo del contenedor */
   }
 
   .custom-navbar .navbar-nav {
